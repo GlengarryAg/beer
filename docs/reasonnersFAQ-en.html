@@ -1,0 +1,33 @@
+
+<p>The promise of <a href="https://en.wikipedia.org/wiki/Resource_Description_Framework">Resource Description Framework</a> is in two parts: a distributed knowledge graph with
+url-style identifiers and support for making statements about them.  The
+<i>syntax</i> of the RDF data model has been widely adopted for several
+applications using different serializations (rdf/xml, json-ld, turtle, etc...),
+including bibliography, search engine optimization and API integrations. 
+Occasionally, providers will even offer the same data in several serializations
+using transparent content negotiation to let client libraries choose the optimal
+serialization.</p>
+
+<p>The promise of RDF with strong knowledge management through standards
+such as <a
+href="https://www.w3.org/TR/rdf-schema/">RDF/S</a>, <a
+href="https://www.w3.org/TR/owl2-primer/">OWL</a> and later <a
+href="https://www.w3.org/TR/shacl/">SHACL</a> remains to be fully realized as
+many data providers see RDF as a schema mechanism rather than a knowledge
+management or ontological one.</p>
+
+<p>The W3 ontologies for <a href="https://www.w3.org/TR/owl-time/">time</a>, <a href="https://www.w3.org/TR/prov-o/">prov</a> and 
+<a href="https://www.w3.org/TR/vocab-ssn/">SOSA/SSN</a> are used as the basis for most terms, the <a href="https://bibliontology.com/">Bibo</a> ontologies for citations /
+references and the OGC <a href="https://www.ogc.org/standards/geosparql">GeoSparql</a> standard is used for spatial data.  Other ontologies are referenced on an as-needed basis
+depending on the domain.  Commercially and trade oriented data is recorded using both the <a href="https://schema.org">schema.org</a> and <a href="https://www.gs1.org/voc/">GS1</a> vocabularies. Whenever possible, physical measurements are reported in both imperial and metric units using the <a href="https://www.qudt.org/">qudt</a> and/or the <a href="http://www.obofoundry.org/">obo</a> ontologies.</p>
+
+<p>This ontology is designed to be used as both a fully fledged ontology (in RDF/S and OWL) with complex reasoning capability and a
+schema-driven dataset for simple querying.  As such, it contains a significant amount of redundant information and materialized
+reflective properties that are designed to maintain compatibility and usefulness in multiple environments.  Developers that are
+used to reading raw RDF statements to locate the relevant information may find it easier to build a query directly from the
+documentation rather than reading the machine code.</p>
+
+<p>Lastly, while few environments can support OWL at its full capacity, this
+ontology is useful in the development of applications requiring multilingual
+labeling, term translation and long term entity identifiers for form
+generation and reporting.</p>

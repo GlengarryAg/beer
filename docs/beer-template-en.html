@@ -9,7 +9,7 @@
     <link href="css/xmlns-style.css" rel="stylesheet" type="text/css" />
     <link href="css/style.css" rel="stylesheet"  type="text/css" />
     <link rel="mvcb:generatorAgent" type="application/rdf+xml" title="DOAP" href="https://raw.githubusercontent.com/muninn/ontology-tools/master/rdf/voidDescription.rdf" />
-    m4_include(googleTags.html)
+    m4_include(miscScripts.html)
     <script id="vocab" type="application/ld+json">
      m4_include(beer-ONTOLOGY_DATE.jsonld)
     </script>
@@ -207,6 +207,8 @@
             <p>As a policy, if there is no translation for a label then it is not added and it is kept in the original language. If the translation is the same word, then both labels will still be kept.</p>
             
             <p>In French, the term 'bière blonde' is used interchangeably to mean either a pale ale or a lager depending on the region, which can be extremely confusing. To simplify matters the french label for 'pale ale' will be 'ale pâle' and 'lager' for lager unless further specified by a region. For example, pale ales in Quebec are called 'bière blonde', therefore the <rdfs:label xml:lang="fr_ca"> tag is used to signify Canadian French.</p>
+
+        <h4 id="interopRant">10.3 Data Verbosity, Interoperability and Reasoners</h4>
 m4_include(reasonnersFAQ-en.html)
             
     <h3 id="releasenotes">11. Release Notes</h3>
