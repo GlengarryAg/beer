@@ -1,10 +1,10 @@
 # beer
-An ontology about Beer, it's styles and ingredients. 
+An OWL2 ontology about Beer, it's styles and ingredients.  
 
-Current Version: 1.2
-Release Date: 2021-03-24
-Suggested prefix: beer
-Current release: https://rdf.ag/o/beer-2021-03-24
+Current Version: 1.2   
+Release Date: 2021-03-24   
+Suggested prefix: beer   
+Current release: https://rdf.ag/o/beer-2021-03-24   
 
 
 
