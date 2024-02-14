@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html
+  xmlns="http://www.w3.org/1999/xhtml"
+  xml:lang="en">
+
+  <head>
+    <title>Beer Ontology</title>
+    <meta http-equiv="content-type" content="text/xhtml+xml; charset=utf-8" />
+    <link href="css/xmlns-style.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet"  type="text/css" />
+    <link rel="mvcb:generatorAgent" type="application/rdf+xml" title="DOAP" href="https://raw.githubusercontent.com/muninn/ontology-tools/master/rdf/voidDescription.rdf" />
+    m4_include(googleTags.html)
+    <script id="vocab" type="application/ld+json">
+     m4_include(beer-ONTOLOGY_DATE.jsonld)
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/exampleSwitcher.js"></script>
+  </head>
+
+  <body>
+
+{_header_}
+<p class="copyright">For the purposes of Copyright, this work is Copyright &#169; 2021 - Myra Analytics</p>
+  <p class="copyright">This work is dual-licensed under a <a href="https://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported license</a> and an additional commercial license. Please contact info@myraanalytics.ca for further details.</p>
+
+    <!-- ===================================================================== -->
+
+    <hr />
+
+    <h2 id="abstract">Abstract</h2>
+        <p>The scope of this ontology is to help provide beer and beer ingredient traceability, process control and style identification in a language neutral way.</p>
+
+    <h2 id="contents">Table of Contents</h2>
+    <div class="table-contents">
+     <ul style="list-style-type:none;">
+    m4_include(beer-toc-en.html)
+     </ul>
+    </div>
+
+    <h3 id="introduction">1.  Introduction</h3>
+        <p>Since the dawn of man, beer has had a huge impact on human development. Despite our long history with beer, there are still many aspects of beer that are unknown to us and it is still more of an art form than a science.</p>
+        
+        <p>Beer is made through fermenting malts, hops, and even fruits for additional flavors. Due to differences of terrior in hops, various styles and ingredients, a craft brewer may not know exactly what a batch will taste like until the end of the process.</p>
+        
+        <p>This ontology was created for beer traceability but also to lay the groundwork for providing standardization for beers and beer styles. This will allow brewers to have a better idea of what to expect when they brew a new batch of beer, with the hope that this ontology will help boost creativity for new beer recipes. It will also allow better relationships to form between the brewers and growers since the brewers will know exactly what they are purchasing.</p>
+        
+        <p>Along with the other Myra Analytics ontologies, <a href="https://rdf.ag/">https://rdf.ag/</a>, brewers, malters and growers are able to not only provide traceability for their products but also be able to easily facilitate the sale of their products on the market.</p>
+
+    <h3 id="history">2. Brief History of Beer</h3>
+
+        <p>Alcohol has been intertwined in human history for thousands of years, in fact, it is the reason for our primate ancestors descending from the trees. Fruit that had fallen from the trees and started to ferment were a prime source nourishment since they were easier to digest. Those who could smell the alcohol got more calories, and it is suggested that our ancestors even started cultivating grains not for bread but for beer (<a href="#Curry2017">Curry, 2017</a>).</p>
+    
+        <p>According to National Geographic, the first known evidence of alcoholic beverages occurred around 7000 B.C. in Jiahu, China (<a href="#Curry2017">Curry, 2017</a>). From then on, with the domestication of more grains, fruits and vegetables, fermented beverages blossomed into the various styles of beer, wines and spirits.</p>
+    
+        <p>Today, beer is the second most consumed alcoholic beverage (34.3%) behind spirits (44.8%) (<a href="#WHO2018">WHO, 2018</a>), with China as the lead producer of beer with the United States as the second largest producer.</p>
+    
+        <p>With humankind's deep history with beer, it has become so ingrained in our culture and is seen as a symbol of community. However, due to humanity's long relationship with beer, the different styles have evolved and blended over thousands of years, which makes this ontology essential for beer traceability.</p>
+    
+    <h3 id="scope">3. Scope of this Ontology</h3>
+        <p>The Beer Ontology is used to help with traceability, marketing and inventory for breweries. Also by classifying the different styles of beer, consumers will be able to make more informed decisions on choosing beers.</p>
+            
+        <p>This ontology includes the classification of various beer styles, legislation on Designation of Origin, brewing processes, brewing containers, and beer packaging containers. All of this data is vital for brewers to more easily manage their inventory and to provide more targeted advertising and more information for consumers, which aids in the selling of their products.</p>
+
+    <h3 id="organizaion">4.  Organization</h3>
+    
+        <p>The beer ontology has three major structural constructs: Beer Styles, Beer Organizations and Packaging.</p>
+
+        <h4 id="beerstyles">4.1 Beer Styles</h4>
+    
+            <p>In this ontology, beer styles are based on the ingredients and brewing processes. This definition of a beer style serves to avoid confusion between generally accepted beer styles and 'marketing' terms. These styles are sub-classed since they are specializations of certain types of beer.</p>
+        
+            <h5 id="brownale">4.1.1 Brown Ale</h5>
+        
+                <p>Brown ales are mostly a descriptor term rather than a style, some styles do have the word 'brown' in it but not all those styles are characterized as being brown colored. The coloring of beer comes from the color and/or the quantity of the malts.</p>
+
+            <h5 id="english">4.1.2 English vs British Style</h5>
+            
+                <p>While 'British' and 'English' account for different locations, in terms of beer they mean the same thing. 'English Style' is used as foaf:name since it is more common.</p>
+                
+            <h5 id="lagersvsales">4.1.3 Lagers vs Ales</h5>
+        
+                <p>Lagers are often said to differ from beers because they have "bottom fermenting yeasts" while ales have "top fermenting" yeasts. This is more of a description of the yeast's flocculation rather than where it ferments. "Top" fermenting yeasts are yeasts whose flocculation process produces flocs that rise to surface, also called 'creaming'. "Bottom" fermenting yeasts are yeasts whose flocculation process produces flocs that settle to the bottom, also called 'sedimentation' (<a href="#Kulkarni2016">Kulkarni, 2016</a>, <a href="#Stewart2018">Stewart, 2018</a>).</p>
+        
+            <h5 id="nonbeers">4.1.4 Non-Beers</h5>
+        
+                <p>As they are not beverages derived from the fermentation of malts, ciders and meads are not beers. However, their consumption is closely aligned with beer and are listed in this ontology for the sake of convenience.</p>
+
+        <h4 id="brewer">4.2 Beer Making Organizations</h4>
+        
+            <p>A Brewery is an organization or physical location where beer is brewed.</p>
+
+         <h4 id="packaging">4.3 Packaging</h4>
+         
+            <p>The beer ontology attempts to strike a balance between a fully descriptive encoding of beer product packaging and an ease of use that operationally feasible.  Multiple measurements with imperial and metric units are available for the same packaging dimensions with the expectation that end users will query their way to the needed measurement. Units are identified using <a href="https://unece.org/fileadmin/DAM/cefact/recommendations/rec20/rec20_rev3_Annex2e.pdf">UN/ECE Recommendation No. 21</a> and the quot ontology. The actual assignment of the measurement to the dimension is achieved using GS1 and schema.org vocabularies for trade quantities and SOSA/SSN ontologies for nominal packaging measurements in a combined representation whenever possible. Often types, classes and subclasses are explicitly stated even through inference is possible so that the ontology can be used as is without reasoner support.<p>
+         
+            <p>Different communities have different approaches to measuring packaging due to their context: while GS1 and schema.org measure quantity with respect to the product traded, packaging vendors will record packaging dimension with respect to an engineering or capacity measurement. This explains why the ubiquitous "202/211" soft drink and beer list a 'net content' of 12oz / 355ml, which is essentially 'nominal content', with an 'overflow capacity' of somewhere around 380ml. Packaging for liquids can be filled by weight which makes for large variety of measurements.</p>
+            
+            <p>Currently, <a href="#Keg">Kegs</a> and commonly used <a href="#can355">355ml</a> "soda" and the <a href="#can473">473ml</a> "tall-boy" cans have been implemented in this version. Container material and sealing mechanism (such as the common "wide mouth") are not currently reported nor is the lining of the can. Given the potential uses for recycling and <a href="https://www.cbc.ca/news/canada/calgary/calgarians-warned-fire-risk-canned-aluminum-hand-sanitizer-crisis-grade-1.5812973">detecting unwanted packaging-content interactions</a>, this will be investigated in a later version.</p>
+
+            <p>"Compound" packaging is common in the beer industry, with "six packs", flats of 24 beer cans ("two fours") and cases of 6, 12 and 24 beer bottles. These packages will be supported in a later version.</p>
+
+          <h4 id="beerproduct">4.4 Beer vs. Beer products</h4>
+
+            <p>The Beer ontology makes a distinction between <a href="#Beer">Beer</a> and <a href="#BeverageProduct">Beverage Products</a> where one term represents the actual substances and the second represents the beer in its commercial packaging before consumption. The beer product also inherits branding, pricing and inventory constructs from other ontologies as it is the commercial trade unit.</p>
+    
+    <h3 id="beerexamples">5. Marketing Beer Examples Using Ontologies</h3>
+        
+        <p>The beer ontology concerns itself primarily with Beer and it's brewing, without overextending itself into other domains. At its core, it can mark up the existence of a Beer, its style, brewer, packaging, and ingredients with limited support for documenting the brewing process itself. Presented here are a series of examples for demonstration purposes, occasionally augmented with other ontologies as necessary.</p>
+
+        <p>The beer ontology is a fully compliant OWL/RDFS ontology that references the well-known gs1 and schema.org vocabularies and provides the relevant equivalencies to align similar properties and classes. For some applications, such as Search Engine Optimization, it may be necessary to declare redundant elements (such as typing a Brewery as a schema:Organization) for interoperability reasons. Applications that make use of reasoners to query information do no need to expand this information.</p>
+
+        <h4 id="acme-brewery-exampls">5.1 ACME Brewery Examples</h4>
+            
+            <p><a href="exampleRDF1">Example 1</a> shows how to use the beer ontology to represent the information of the fictitious ACME brewery.</p>
+            
+            <p>As <a href="https://rdf.ag/o/beer#Brewery">beer:Brewery</a> is a class that extends <a href="https://schema.org/Organization">schema:Organization</a>, <a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a> and <a href="https://gs1.org/voc/Organization">gs1:Organization</a>. This allows the use of a wide ecosystem of vocabularies and the street address of the fictitious brewery is recorded with it. While many authors prefer to use blank nodes for brevity, we name nodes here so that example fragments can be related to one another while being short.</p>
+
+            importRDFExample[ACME Brewery, our local brewery example][beer/acme-brewery.owl]
+            
+            <p>Our fictitious brewery brews two different beers: ACME Ale and ACME Best Stout. Within the beer ontology, a <a href="https://rdf.ag/o/beer#Beer">beer:Beer</a> is a beverage that is an instance of a beer style with a brand, name or a common manufacturer without references to quantity or packaging.</p>
+            
+            <p>The Beer can be related to its parent brewery through several vocabularies such as <a href="https://schema.org/manufacturer">schema:manufacturer</a>, <a href="https://gs1.org/voc/brand">gs1:brand</a> or <a href="https://gs1.org/voc/manufacturer">gs1:manufacturer</a> or even <a href="http://purl.org/dc/terms/creator">dcterms:creator</a>. For users that simply want to record a relationship while not committing to a concrete relationship can use the beer ontology property <a href="https://rdf.ag/o/beer#brewedBy">brewedBy</a> which is easily understandable and can align with most ontological cases.</p>
+
+            importRDFExample[ACME Brewery Beers][beer/acme-brewery-beers.owl]            
+
+            
+            <p>A <a href="https://rdf.ag/o/beer#BeverageProduct">Beer:BeverageProduct</a> is a <a href="https://rdf.ag/o/beer#Beer">Beer:Beer</a> that is contained within a container that can be moved or traded. In schema.org parlace, a <a href="https://rdf.ag/o/beer#Beer">Beer:Beer</a> is a <a href="https://schema.org/ProductGroup">schema:ProductGroup</a> that has <a href="https://rdf.ag/o/beer#BeverageProduct">beer:BeverageProduct</a> for <a href="https://schema.org/hasVariant">schema:hasVariant</a>s. This essentially relates the beer as an abstract product to its materialized availability as discrete consumable product by relating the <a href="https://rdf.ag/o/beer#BeverageProduct">Beer:BeverageProduct</a> to its container using a <a href="https://gs1.org/voc/package">gs1:package</a> property.<p>
+            
+            <p>Thus, should our two beers be exclusively available in 473ml aluminum cans, we can define packaging properties by referencing the <a href="#can473">#can473</a> and write:</p>
+
+            importRDFExample[ACME Brewery Beers][beer/acme-brewery-products.owl]              
+            
+            <p>Each new packaging or container requires a new instance of a <a href="https://rdf.ag/o/beer#BeverageProduct">Beer:BeverageProduct</a>.</p>
+
+          <h5 id="brewery_beer">5.1 ACME Brewery with schema.org Offers</h5>
+            
+            <p><a href="exampleRDF2">Example 2</a> In this example, we create a schema.org offer that will advertise that the beer is available for sale commercially. ACME brewery has an onsite sales counter that will sell individual 473ml aluminum cans of stout.</p>
+            
+            importRDFExample[ACME Brewery with Offers][beer/brewery_beer.owl]
+
+            <p>The addition of a <a href="https://schema.org/Offer">schema:Offer</a> for the can, at a price and in a specified
+            currency is made and the organization making the offer (the brewery) is listed along with its street location.</p>
+
+        <h4 id="germanpuritylaw">5.2 German Purity Law Beer</h4>
+            <p><a href="exampleRDF3">Example 3</a> The German Beer Purity Law of 1516 had strict limits on the ingredients permitted in beer: water, barley, hops and (later) yeast. The ontology can be used to record data about historical beers and commercial breweries making claims based on this style.</p>
+            
+            importRDFExample[German Purity Law Beers][beer/germanbeer.owl]
+           
+            <p>The <a href="https://www.weltenburger.de/">Weltenburg Monastery</a> Brewery, the <a href="https://www.ur-krostitzer.de/">Ur-Krostitzer</a> brand from the Radeberger Group and <a href="https://www.augustiner-braeu.de/">Augustiner-Bräu</a> is a brewery still make beer which qualifies as German Purity Law Beer.</p>
+
+            importRDFExample[Recording historical events with the beer ontology.][beer/germanbeerhistorical.owl]
+            
+            <p>The ontology is flexible enough to record historical event, such as <a href="https://en.wikipedia.org/wiki/Carl_von_Horn_(1847%E2%80%931923)">Karl Graf von Horn</a> drinking locally available beer. It's application to recording alcohol consumption for dietary analysis is also possible.</p>
+    
+    <h3 id="datasets">6. Linkages to Other Datasets</h3>
+    
+        <p>The Beer ontology links to <a href="https://foodon.org/">FOODON</a> equivalent classes and makes use of the <a href="https://www.gs1.org/gs1-web-vocabulary">GS1</a>, <a href="https://www.schema.org/">schema.org</a>, <a href="https://www.w3.org/TR/vocab-ssn/">sosa/ssn</a> ontologies to represent measurements and <a href="https://www.w3.org/TR/prov-o/">prov</a> ontology for provenance and documentation.</p>
+        
+    <h3 id="definition_list">7. Global Cross-Reference</h3>
+
+    <!-- The list of classes and properties goes here -->
+    {_azlist_}
+    <!-- End of the terms list -->
+
+    <h3 id="reference">8. Detailed References for All Terms, Classes and Properties</h3>
+
+    <!-- The following is the script-generated list of classes and properties -->
+    {_terms_}
+    <!-- End of the terms list -->
+
+    <h3 id="version_history">9. Version History</h3>
+
+            <p>Version 1.5</p>
+            <ul>
+             <li>Added <a href="https://www.w3.org/TR/prov-o/">prov</a>/<a href="https://www.w3.org/TR/owl-time/">time</a> ontology alignment according to <a href="https://www.w3.org/TR/owl-time/#time-prov">Time ontology documentation</a>.</li>
+            </ul>
+
+            <p>Version 1.2</p>
+            <ul>
+             <li>Added examples for ACME brewery and German beers.</li>
+             <li>Added beer making activities for recording purposes.</li>
+             <li>Added gs1:packing properties.</li>
+             <li>Extensive schema.org meta-data addition</li>
+            </ul>
+            <p>Version 1.1</p>
+            <ul>
+            <li>Added FoodOn relationships.</li>
+            <li>Added Milk stout class and historical note on UK legislation on milk.</li>
+            <li>Imports for prov and sosa ontologies.</li>
+            <li>Fixed bad language tag.</li>
+            <li>rdfs compatibility added.</li>
+            <li>http/https compatibility added.</li>
+            </ul>
+            <p>Version 1.0</p>
+            <ul>
+             <li>Initial release.</li>
+            </ul>
+    
+    <h3 id="genericnotes">10. General Notes</h3>
+    
+        <h4 id="storability">10.1 Storeability</h4>
+            
+            <p>Storability was kept as a data type property since it is a property that is generally associated with the hop variety, however HSI would be an observable property since that is what gets tested for every lot.</p>
+   
+        <h4 id="translation">10.2 Translations</h4>
+   
+            <p>As a policy, if there is no translation for a label then it is not added and it is kept in the original language. If the translation is the same word, then both labels will still be kept.</p>
+            
+            <p>In French, the term 'bière blonde' is used interchangeably to mean either a pale ale or a lager depending on the region, which can be extremely confusing. To simplify matters the french label for 'pale ale' will be 'ale pâle' and 'lager' for lager unless further specified by a region. For example, pale ales in Quebec are called 'bière blonde', therefore the <rdfs:label xml:lang="fr_ca"> tag is used to signify Canadian French.</p>
+m4_include(reasonnersFAQ-en.html)
+            
+    <h3 id="releasenotes">11. Release Notes</h3>
+    
+            <p>The RDF terms for the bibliography are marked unstable as the
+            bibliography generator is buggy and requires further work.</p>             
+
+    <h3 id="deprecated">12. Deprecated Terms</h3>
+{_deprecated_}
+
+    <h3 id="bibliography">13. Ontology Bibliography</h3>
+    <p>This bibliography is available as a Bibtex file <a href="beer-ONTOLOGY_DATE.bib">here</a>.</p>
+
+m4_include(beer-citations.html)
+
+    <!-- =====================================================================
+     ===================================================================== -->
+
+
+  </body>
+
+</html>

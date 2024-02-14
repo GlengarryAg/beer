@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xml:base="https://example.com/ex1#"
+  xmlns="https://example.com/ex1#"
+  xmlns:beer="https://rdf.ag/o/beer#"
+  xmlns:gs1="https://gs1.org/voc/"
+  xmlns:schema="http://schema.org/"
+  xmlns:as="http://www.w3.org/ns/activitystreams#"
+  xmlns:cc="http://creativecommons.org/ns#"
+  xmlns:cereals="https://rdf.ag/o/cerealstoo#"
+  xmlns:dbpedia="http://dbpedia.org/resource/"
+  xmlns:bibo="http://purl.org/ontology/bibo/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:doap="http://usefulinc.com/ns/doap#"
+  xmlns:eurovoc="http://eurovoc.europa.eu/"
+  xmlns:sosa="http://www.w3.org/ns/sosa/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:geonames="http://sws.geonames.org/"
+  xmlns:loc="http://id.loc.gov/vocabulary/relators/"
+  xmlns:nif="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#"
+  xmlns:oa="http://www.w3.org/ns/oa#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:prov="http://www.w3.org/ns/prov#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:skosxl="http://www.w3.org/2008/05/skos-xl#"
+  xmlns:time="http://www.w3.org/2006/time#"
+  xmlns:vann="http://purl.org/vocab/vann/"
+  xmlns:void="http://rdfs.org/ns/void#"
+  xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+  xmlns:unit="http://www.qudt.org/2.1/vocab/unit"
+  xmlns:qudt="http://www.qudt.org/2.1/schema/qudt"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+  <beer:Brewery rdf:about="#guinnessBrewery">
+    <foaf:name>Guinness Brewery</foaf:name>
+    <rdfs:comment>This description was borrowed from the official Guinness website.</rdfs:comment>
+    <schema:description xml:lang="en">It takes adventurous spirit and irrepressible ingenuity to do things the Guinness® way...</schema:description>
+    <schema:description xml:lang="fr">Il faut un esprit aventureux et une ingéniosité irrépressible pour faire les choses de la Guinness®...</schema:description>
+    <schema:address>
+      <schema:PostalAddress rdf:about="#guinnessPostalAddress">
+        <schema:addressCountry>Ireland</schema:addressCountry>
+        <schema:addressRegion>Dublin 8</schema:addressRegion>
+        <schema:streetAddress>53 James’s Street St James’s Gate</schema:streetAddress>
+      </schema:PostalAddress>
+    </schema:address>
+  </beer:Brewery>
+
+  <beer:Stout rdf:about="#guinnessDraught">
+    <rdf:type rdf:resource="https://schema.org/Product"/>
+    <gs1:brand rdf:resource="#guinnessBrewery"/>
+    <rdfs:label xml:lang="en">Guinness Draught</rdfs:label>
+    <rdfs:comment>This description was borrowed from the official Guinness website.</rdfs:comment>
+    <schema:description xml:lang="en">Rich and creamy. Distinctively black. Velvety in its finish...</schema:description>
+    <schema:description xml:lang="fr">Riche et crémeux. Distinctivement noir. Velouté dans sa finition...</schema:description>
+  </beer:Stout>
+  
+  <beer:BeverageProduct rdf:about="#guinnessDraughtCan473">
+    <rdfs:label xml:lang="en">Guinness Draught, 473ml Can</rdfs:label>
+    <rdf:type rdf:resource="https://schema.org/Product"/>
+    <schema:isVariantOf rdf:resource="#guinnessDraught"/>
+    <gs1:packaging rdf:resource="https://rdf.ag/o/beer#can473"/>
+    <schema:offers rdf:resource="#guinnessDraughtCan473Offer"/>
+  </beer:BeverageProduct>
+  
+  <schema:Offer rdf:about="#guinnessDraughtCan473Offer">
+    <rdfs:label xml:lang="en">Guinness Draught, 473ml Can for 3.25$ at LCBO</rdfs:label>
+    <schema:availability rdf:resource="https://schema.org/InStock"/>
+    <schema:offeredBy>
+     <foaf:Organization rdf:about="#lcbo">
+      <foaf:name>LCBO</foaf:name>
+      <skos:definition>Liquor Control Board of Ontario is a corporation of the Crown that distributes and sells alcoholic beverages throughout Ontario, Canada.</skos:definition>
+     </foaf:Organization>
+    </schema:offeredBy>
+    <schema:price>3.25</schema:price>
+    <schema:priceCurrency>CAD</schema:priceCurrency>
+  </schema:Offer>
+
+</rdf:RDF>

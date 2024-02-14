@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xml:base="https://example.com/ex1#"
+  xmlns="https://example.com/ex1#"
+  xmlns:beer="https://rdf.ag/o/beer#"
+  xmlns:gs1="https://gs1.org/voc/"
+  xmlns:schema="http://schema.org/"
+  xmlns:as="http://www.w3.org/ns/activitystreams#"
+  xmlns:cc="http://creativecommons.org/ns#"
+  xmlns:cereals="https://rdf.ag/o/cerealstoo#"
+  xmlns:dbpedia="http://dbpedia.org/resource/"
+  xmlns:bibo="http://purl.org/ontology/bibo/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:doap="http://usefulinc.com/ns/doap#"
+  xmlns:eurovoc="http://eurovoc.europa.eu/"
+  xmlns:sosa="http://www.w3.org/ns/sosa/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:geonames="http://sws.geonames.org/"
+  xmlns:loc="http://id.loc.gov/vocabulary/relators/"
+  xmlns:nif="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#"
+  xmlns:oa="http://www.w3.org/ns/oa#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:prov="http://www.w3.org/ns/prov#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:skosxl="http://www.w3.org/2008/05/skos-xl#"
+  xmlns:time="http://www.w3.org/2006/time#"
+  xmlns:vann="http://purl.org/vocab/vann/"
+  xmlns:void="http://rdfs.org/ns/void#"
+  xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+  xmlns:unit="http://www.qudt.org/2.1/vocab/unit"
+  xmlns:qudt="http://www.qudt.org/2.1/schema/qudt"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+ <beer:GermanPurityLawBeer rdf:about="#WeltenburgKlosterAnno1050">
+  <foaf:name>Weltenburger Kloster Anno 1050</foaf:name>
+  <rdfs:label>Weltenburger Kloster Anno 1050</rdfs:label>
+  <schema:description xml:lang="de">Das goldene Märzen: Vollmundig, kräftig, malzig! Feine Karamellnoten und angenehm-milde Hopfenbittere! Ein wahres Genusserlebnis!</schema:description>
+  <schema:description xml:lang="en">The golden Märzen: full-bodied, strong, malty! Fine caramel notes and pleasantly mild hop bitterness! A real pleasure experience!</schema:description>
+  <schema:description xml:lang="fr">Le Märzen doré: corsé, fort, malté! De fines notes de caramel et un gout amer de houblon agréablement doux! Une véritable expérience de plaisir!</schema:description>
+  <beer:abvValue>5.0</beer:abvValue>    
+  <beer:brewedBy rdf:resource="https://www.weltenburger.de/"/>
+ </beer:GermanPurityLawBeer>
+
+ <beer:GermanPurityLawBeer rdf:about="#UrKrostitzerPilsner">
+  <foaf:name>Ur-Krostitzer Pilsner</foaf:name>
+  <rdfs:label>Ur-Krostitzer Pilsner</rdfs:label>
+  <schema:description xml:lang="de">Feincremiger Schaum, schön moussierend von lebendig angenehmer Frische gibt unserem Ur-Krostitzer Pilsner seine feine Eleganz in Geschmack und Aussehen.</schema:description>
+  <schema:description xml:lang="fr">Une mousse fine et crémeuse, magnifiquement pétillante avec une fraîcheur vive et agréable donne à notre Krostitzer Pilsner original sa belle élégance en goût et en apparence.</schema:description>
+  <schema:description xml:lang="en">Fine creamy foam, beautifully sparkling with lively, pleasant freshness gives our original Krostitzer Pilsner its fine elegance in taste and appearance.</schema:description>
+  <beer:abvValue>4.9</beer:abvValue>
+  <beer:brewedBy rdf:resource="https://www.ur-krostitzer.de/"/>
+  <rdf:type rdf:resource="https://rdf.ag/o/beer#Pilsner"/>
+ </beer:GermanPurityLawBeer>
+
+ <beer:GermanPurityLawBeer rdf:about="#LagerbierHell">
+  <foaf:name>Lagerbier Hell</foaf:name>
+  <rdfs:label>Lagerbier Hell</rdfs:label>  
+  <schema:description xml:lang="en">A particularly mild, sparkling, long stored beer, refreshing and easily digestible at the same time. Uniquely in its taste, a benefit for each beer connoisseur.</schema:description>
+  <schema:description xml:lang="de">Ein besonders mildes, spritziges, lang gelagertes und vor allem erfrischendes Bier. Einmalig in seinem Geschmack, ein Genuss für jeden Bierkenner.</schema:description>
+  <schema:description xml:lang="fr">Une bière particulièrement douce, acidulée, de longue garde et surtout rafraîchissante. Unique dans son goût, un plaisir pour tous les connaisseurs de bière.</schema:description>
+  <beer:brewedBy rdf:resource="https://www.augustiner-braeu.de/"/>
+  <beer:abvValue>5.2</beer:abvValue>
+  <rdf:type rdf:resource="https://rdf.ag/o/beer#Ale"/>
+ </beer:GermanPurityLawBeer>
+</rdf:RDF>

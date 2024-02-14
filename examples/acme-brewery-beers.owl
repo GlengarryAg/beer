@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xml:base="https://rdf.ag/o/brewery_beer#"
+  xmlns="https://rdf.ag/o/brewery_beer#"
+  xmlns:beer="https://rdf.ag/o/beer#"
+  xmlns:gs1="https://gs1.org/voc/"
+  xmlns:schema="http://schema.org/"
+  xmlns:as="http://www.w3.org/ns/activitystreams#"
+  xmlns:cc="http://creativecommons.org/ns#"
+  xmlns:cereals="https://rdf.ag/o/cerealsToo#"
+  xmlns:dbpedia="http://dbpedia.org/resource/"
+  xmlns:bibo="http://purl.org/ontology/bibo/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:doap="http://usefulinc.com/ns/doap#"
+  xmlns:eurovoc="http://eurovoc.europa.eu/"
+  xmlns:sosa="http://www.w3.org/ns/sosa/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:geonames="http://sws.geonames.org/"
+  xmlns:loc="http://id.loc.gov/vocabulary/relators/"
+  xmlns:nif="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#"
+  xmlns:oa="http://www.w3.org/ns/oa#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:prov="http://www.w3.org/ns/prov#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:skosxl="http://www.w3.org/2008/05/skos-xl#"
+  xmlns:time="http://www.w3.org/2006/time#"
+  xmlns:vann="http://purl.org/vocab/vann/"
+  xmlns:void="http://rdfs.org/ns/void#"
+  xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+  xmlns:unit="http://www.qudt.org/2.1/vocab/unit"
+  xmlns:qudt="http://www.qudt.org/2.1/schema/qudt"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+  <beer:Beer rdf:about="#acmeBestStout">
+    <rdf:type rdf:resource="https://rdf.ag/o/beer#Stout"/>
+    <rdfs:label>ACME Best Stout</rdfs:label>
+    <dcterms:description xml:lang="en">The Best Stout uses premium Cascade hops, the absolute best saccharomyces cerevisiae yeast, Jonathan Goldsmith-endorsed chocolate 2-row malt and water harvested from God's tears.</dcterms:description>
+    <dcterms:description xml:lang="fr">The Best Stout utilise du houblon Cascade de première qualité, la meilleure levure saccharomyces cerevisiae, du malt au chocolat à 2 rangs approuvé par Jonathan Goldsmith et de l'eau récoltée dans les larmes de Dieu.</dcterms:description>
+    <beer:brewedBy rdf:resource="#acmeBrewery"/>
+  </beer:Beer>
+
+  <beer:Beer rdf:about="#acmeAle">
+    <rdf:type rdf:resource="https://rdf.ag/o/beer#Ale"/>
+    <rdfs:label>ACME Ale</rdfs:label>
+    <dcterms:description xml:lang="en">A full-bodied, sweeter and fruity drink in taste.</dcterms:description>
+    <dcterms:description xml:lang="fr">Une boisson corsée, plus sucrée et fruitée en goût. </dcterms:description>
+    <beer:brewedBy rdf:resource="#acmeBrewery"/>
+  </beer:Beer>
+  
+      
+</rdf:RDF>

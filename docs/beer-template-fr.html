@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html 
+  xmlns="http://www.w3.org/1999/xhtml"
+  xml:lang="en">
+
+  <head>
+    <title>L'Ontologie de la Bière</title>
+    <meta http-equiv="content-type" content="text/xhtml+xml; charset=utf-8" />
+    <!-- With Apologies to Dan Brickley and Libby Miller -->
+    <link href="css/xmlns-style.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet"  type="text/css" />
+    <link rel="mvcb:generatorAgent" type="application/rdf+xml" title="DOAP" href="https://raw.githubusercontent.com/muninn/ontology-tools/master/rdf/voidDescription.rdf" />
+    m4_include(googleTags.html)
+    <script id="vocab" type="application/ld+json">
+     m4_include(beer-ONTOLOGY_DATE.jsonld)
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/exampleSwitcher.js"></script>
+  </head>
+
+  <body>
+
+{_header_}
+
+<p class="copyright">Pour les raisons de droit d'auteur, cette oeuvre a tous ses droits réservés par Myra Analytics. &#169; 2021</p>
+
+    <p class="copyright">
+    Cette oeuvre est disponible sous une double licence <a href="https://creativecommons.org/licenses/by/3.0/"> licence Creative Commons Attribution 3.0 Unported</a> et une licence commerciale supplémentaire. Veuillez contacter info@myraanalytics.ca pour plus de détails. </p>
+    </p>
+    
+
+    <!-- ===================================================================== -->
+
+    <hr />
+
+    <h2 id="abstract">Résumé</h2>
+        <p>Le but de cette ontologie est d'aider la traçabilité de la bière et des ingrédients de la bière, le contrôle des processus et l'identification du style d'une manière neutre vis-à-vis le langage.</p>
+        
+    <h2 id="contents">Table des Matières</h2>
+    <div class="table-contents">
+     <ul style="list-style-type:none;">
+    m4_include(beer-toc-fr.html)
+     </ul>
+    </div>
+
+    <h3 id="introduction">1.  Introduction</h3> 
+        <p>Depuis l'aube de l'humanité, la bière a eu un impact énorme sur le développement humain. Malgré notre longue histoire avec la bière, il existe encore de nombreux aspects de la bière qui nous sont inconnus et c'est encore plus qu'un art qu'une science.</p>
+        
+        <p>La bière est fabriquée à partir de malts fermentés, de houblon et même de fruits pour
+        produire des saveurs supplémentaires. En raison des différences de terrior dans le houblon, de styles et d'ingrédients variés, un brasseur artisanal peut ne pas savoir exactement quel goût sa bière aura jusqu'à la fin du processus.</p>
+        
+        <p>Cette ontologie a été créée pour la traçabilité de la bière, mais aussi pour jeter les bases de la standardisation des bières et des styles de bière. Cela permettra aux brasseurs d'avoir une meilleure idée de ce à quoi s'attendre lorsqu'ils brassent un nouveau lot de bière, dans l'espoir que cette ontologie aidera à stimuler la créativité pour de nouvelles recettes de bière. Cela permettra également de créer de meilleures relations entre les brasseurs et les producteurs, car les brasseurs sauront exactement ce qu'ils achètent.</p>
+        
+    <h3 id="history">2. Brève Histoire de la bière</h3>
+        <p>L'alcool est étroitement lié à l'histoire humaine depuis des milliers d'années, en fait, c'est la raison pour laquelle nos ancêtres primates descendent des arbres. Les fruits qui étaient tombés des arbres et avaient commencé à fermenter constituaient une source de nourriture de premier ordre car ils étaient plus faciles à digérer. Ceux qui pouvaient sentir l'alcool recevaient plus de calories, et il est suggéré que nos ancêtres aient même commencé à cultiver des céréales non pas pour le pain mais pour la bière (<a href="#Curry2017">Curry, 2017</a>).</p>
+        
+        <p>Selon National Geographic, la première preuve connue de boissons alcoolisées s'est produite vers 7000 avant JC à Jiahu, Chine (<a href="#Curry2017">Curry, 2017</a>). Dès lors, avec la domestication de plus de céréales, de fruits et de légumes, les boissons fermentées se sont épanouies dans les différents styles de bière, de vins et de spiritueux.</p>
+        
+        <p>Aujourd'hui, la bière est la deuxième boisson alcoolisée la plus consommée (34,3%) derrière les spiritueux (44,8%) (<a href="#WHO2018">WHO, 2018 </a>). La Chine est le principal producteur de bière avec les États-Unis en deuxième producteur.</p>
+        
+        <p>Avec la profonde histoire de l'humanité avec la bière, elle est devenue ancrée dans notre culture et est considérée comme un symbole de communauté. Cependant, en raison de la longue relation de l'humanité avec la bière, les différents styles ont évolué et se sont mélangés pendant des milliers d'années, ce qui rend cette ontologie essentielle pour la traçabilité de la bière.</p>
+    
+    <h3 id="scope">3. Portée de cette ontologie</h3>
+        <p>L'Ontologie de la Bière est utilisée pour faciliter la traçabilité, la commercialisation et l'inventaire des brasseries. De plus, en classant les différents styles de bière, les consommateurs pourront prendre des décisions plus éclairées sur le choix des bières.</p>
+            
+        <p>Cette ontologie comprend la classification de divers styles de bière, la législation sur l'appellation d'origine, les procédés de brassage, les contenants de brassage et les contenants d'emballage de bière. Toutes ces données sont vitales pour que les brasseurs gèrent plus facilement leur inventaire et pour fournir une publicité plus ciblée et plus d'informations aux consommateurs, ce qui facilite la vente de leurs produits.</p>
+    
+    <h3 id="organizaion">4.  Organisation</h3>
+    
+        <p>L'ontologie de la bière a trois constructions structurelles majeures: les styles de bière, les organisations de la bière et l'emballage.</p>
+    
+        <h4 id="beerstyles">4.1 Styles de Bière</h4>
+    
+            <p>Dans cette ontologie, les styles de bière sont basés sur les ingrédients et les processus de brassage. Cette définition d'un style de bière sert à éviter la confusion entre les styles de bière généralement acceptés et les termes de «marketing». Ces styles sont sous-classés car ce sont des spécialisations de certains types de bière.</p>
+            
+            <h5 id="brownale">4.1.1 Brown Ale</h5>
+            
+                <p>Les ales brunes sont principalement un terme descripteur plutôt qu'un style, certains styles contiennent le mot «brun», mais tous ces styles ne sont pas caractérisés comme étant de couleur brune. La coloration de la bière vient de la couleur et / ou de la quantité de malts.</p>
+                
+            <h5 id="english">4.1.2 Style Anglais vs Britannique</h5>
+            
+                <p>Alors que «Britannique» et «Anglais» représentent des lieux différents, en termes de bière, ils signifient la même chose. «Style Anglais» est utilisé comme foaf: name car il est plus courant.</p>
+                
+            <h5 id="lagersvsales">4.1.3 Lagers vs Ales</h5>
+            
+                <p>On dit souvent que les lagers diffèrent des bières parce qu'elles contiennent des «levures à fermentation basse», tandis que les ales ont des levures «à fermentation haute». Il s'agit davantage d'une description de la floculation de la levure que de l'endroit où elle fermente. Les levures de fermentation "top" sont des levures dont le processus de floculation produit des flocons qui remontent à la surface, également appelés "crémage". Les levures de fermentation "de fond" sont des levures dont le processus de floculation produit des flocs qui se déposent au fond, également appelés "sédimentation" (<a href="#Kulkarni2016">Kulkarni, 2016</a>, <a href="#Stewart2018">Stewart, 2018</a>).</p>
+        
+            <h5 id="nonbeers">4.1.4 Non-Bières</h5>
+            
+                <p>Comme ce ne sont pas des boissons issues de la fermentation de malts, les cidres et hydromels ne sont pas des bières. Cependant, leur consommation est étroitement liée à la bière et est répertoriée dans cette ontologie par souci de commodité.</p>
+                
+        <h4 id="brewer">4.2 Organisations de Fabrication de Bière</h4>
+        
+            <p>Une brasserie est une organisation ou un lieu physique où la bière est brassée.</p>
+        
+        <h4 id="packaging">4.3 Emballage</h4>
+        
+            <p>L'ontologie de la bière tente de trouver un équilibre entre un codage entièrement descriptif de l'emballage du produit de la bière et une utilisation facile et réalisable sur le plan opérationnel. Plusieurs mesures avec des unités impériales et métriques sont disponibles pour les mêmes dimensions d'emballage, dans l'espoir que les utilisateurs finaux interrogeront leur chemin vers la mesure nécessaire. Les unités sont identifiées à l'aide de la <a href="https://unece.org/fileadmin/DAM/cefact/recommendations/rec20/rec20_rev3_Annex2e.pdf">Recommandation N ° 21 de la CEE-ONU</a> et de l'ontologie quot. L'affectation réelle de la mesure à la dimension est réalisée en utilisant les vocabulaires GS1 et schema.org pour les quantités commerciales et les ontologies SOSA / SSN pour les mesures d'emballage nominales dans une représentation combinée chaque fois que possible. Souvent, les types, classes et sous-classes sont explicitement énoncés, même par inférence est possible afin que l'ontologie puisse être utilisée telle quelle sans support raisonnable.<p>
+            
+            <p>Différentes communautés ont des approches différentes pour mesurer les emballages en raison de leur contexte: alors que GS1 et schema.org mesurent la quantité par rapport au produit commercialisé, les vendeurs d'emballages enregistreront la dimension de l'emballage par rapport à une ingénierie ou à une mesure de capacité. Cela explique pourquoi les boissons gazeuses et bières omniprésentes «202/211» affichent un «contenu net» de 12oz / 355ml, qui est essentiellement un «contenu nominal», avec une «capacité de débordement» d'environ 380ml. Les emballages pour liquides peuvent être remplis au poids, ce qui permet une grande variété de mesures.</p>
+            
+            <p>Actuellement, <a href="#Keg">Kegs</a> et <a href="#can355">355ml</a> "soda" et le couramment utilisés canettes "tall-boy" de <a href="#can473">473 ml</a> ont été mises en œuvre dans cette version. Le matériau du récipient et le mécanisme de scellement (tel que la "large ouverture" commune) ne sont pas actuellement mentionnés, ni le revêtement de la canette. Compte tenu des utilisations potentielles pour le recyclage et <a href = "https://www.cbc.ca/news/canada/calgary/calgarians-warned-fire-risk-canned-aluminum-hand-sanitizer-crisis-grade-1.5812973">détecter les interactions indésirables entre l'emballage et le contenu</a>, cela sera étudié dans une version ultérieure.</p>
+
+            <p>L'emballage «composé» est courant dans l'industrie de la bière, avec des emballages de 6 unités «six packs», de 24 unités  «two four» et 12 unités en utilisation courante. Ces packages seront pris en charge plus tard.</p>
+            
+        <h4 id="beerproduct">4.4 Bière vs Boisson</h4>
+
+            <p>L'ontologie de la Bière fait une distinction entre <a href="#Beer">Bière</a> et <a href="#BeverageProduct">Boisson</a> où un terme représente la substance et le second représente la bière dans son emballage commercial avant consommation.
+            La boisson hérite également de la marque, des prix et des stocks construit à partir d'autres ontologies car c'est l'unité de commerce.</p>
+
+        <h3 id="beerexamples">5. Mise en marche de la Bière à l'Aide d'Ontologies</h3>
+
+        <p>L'ontologie de la bière se préoccupe principalement de la bière et sont brassage, sans s'étendre dans d'autres domaines. À son noyau, il peut signaller l'existence d'une bière, son style, son brasseur, l'emballage et les ingrédients avec un soutien limité pour documenter la processus de brassage lui-même. Voici une série d'exemples à des fins de démonstration, augmentées par d'autres ontologies comme nécessaire.</p>
+
+        <p>L'ontologie de la bière est une ontologie OWL / RDFS conforme qui fait référence aux vocabulaires bien connus de gs1 et schema.org Pour certaines applications, telles que l'optimisation des moteurs de recherche, il peut être nécessaire de déclarer des éléments redondants (comme la saisie d'un beer:Brewery comme un schema:Organization) pour des raisons d'interopérabilité. Les applications qui utilisent des raisonneurs pour interroger des informations n'ont pas besoin d'élargir ces informations.</p>
+
+        <h4 id="acme-brewery-exampls">5.1 Exemple de la Brasserie ACME</h4>
+
+        <p>L'<a href="exampleRDF1">Exemple 1</a> montre comment utiliser l'ontologie de la bière pour représenter les informations de la Brasserie fictive ACME.</p>
+        
+        <p>Comme <a href="https://rdf.ag/o/beer#Brewery">beer:Brewery</a> est une classe qui étend <a href="https://schema.org/Organization ">schema:Organization</a>, <a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a> et <a href="https://gs1.org/voc/Organisation">gs1:Organization</a>. Cela permet l'utilisation d'un large écosystème de vocabulaires et l'adresse postale de la brasserie fictive est enregistrée avec elle. Alors que de nombreux auteurs préfèrent utiliser des nœuds vides par souci de concision, nous nommons les nœuds ici afin que les exemples de fragments puissent être liés les uns aux autres tout en étant courts.</p>
+        
+        importRDFExample[La Brasserie ACME, notre Brasserie locale.][beer/acme-brewery.owl]
+        
+        <p>Notre brasserie fictive brasse deux bières différentes : ACME Ale et ACME Best Stout. Dans l'ontologie de la bière, une <a href="https://rdf.ag/o/beer#Beer">beer:Beer</a> est une boisson qui est une instance d'un style de bière avec une marque, un nom ou un fabricant commun sans référence à la quantité ou à l'emballage.</p>
+        
+        <p>Une bière peut être liée à sa brasserie à travers plusieurs vocabulaire tel que <a href="https://schema.org/manufacturer">schema:manufacturer</a>, <a href="https://gs1.org/voc/brand">gs1:brand</a>, <a href="https://gs1.org/voc/manufacturer">gs1:manufacturer</a> ou même <a href="http://purl.org/dc/terms/creator">dcterms:creator</a>. Pour les utilisateurs qui souhaitent simplement enregistrer une relation générale peuvent utiliser la propriété <a href="https://rdf.ag/o/beer#brewedBy">beer:brewedBy</a> qui est facilement compréhensible et peut s'aligner sur la plupart des cas ontologiques.</p> 
+        
+        importRDFExample[Les Bières de la Brasserie ACME][beer/acme-brewery-beers.owl]
+        
+        <p>Une <a href="https://rdf.ag/o/beer#BeverageProduct">Beer:BeverageProduct</a> est une <a href="https://rdf.ag/o/beer#Beer">Beer:Beer</a> contenue dans un conteneur pouvant être déplacé ou échangé. Dans le langage Schema.org, une <a href="https://rdf.ag/o/beer#Beer">Beer:Beer</a> est une <a href="https://schema.org/ProductGroup ">schema:ProductGroup</a> qui a <a href="https://rdf.ag/o/beer#BeverageProduct">Beer:BeverageProduct</a> pour <a href="https://schema.org/hasVariant">schema:hasVariant</a>s. Cela relie essentiellement la bière en tant que produit abstrait à sa disponibilité matérialisée en tant que produit consommable discret en reliant le <a href="https://rdf.ag/o/beer#BeverageProduct">Beer:BeverageProduct</a> à son contenant en utilisant une propriété <a href="https://gs1.org/voc/package">gs1:package</a>.<p>
+   
+        <p>Ainsi, si nos deux bières sont exclusivement disponibles dans des canettes en aluminium de 473 ml, nous pouvons définir les propriétés de l'emballage en référençant le <a href="#can473">#can473</a> et en écrivant:</p>
+        
+        importRDFExample[Les bières en canette de la Brasserie ACME.][beer/acme-brewery-products.owl]
+        
+        <p>Chaque nouvel emballage ou conteneur nécessite une nouvelle instance d'un <a href="https://rdf.ag/o/beer#BeverageProduct">Beer:BeverageProduct</a>.</p>
+
+        <h5 id="brewery_beer_offer">5.1 Une offre schema.org de la Brasserie ACME</h5>
+        
+        <p><a href="exampleRDF2">Exemple 2</a> Dans cet exemple, nous créons une offre schema.org qui annoncera que la bière est disponible à la vente dans le commerce. La brasserie ACME dispose d'un comptoir de vente sur place qui vendra des canettes individuelles en aluminium de 473 ml de stout.</p>
+       
+        importRDFExample[Les offres de vente de la Brasserie ACME.][beer/brewery_beer.owl]
+        
+        <p>L'ajout d'un <a href="https://schema.org/Offer">schema:Offer</a> pour la canette, à un prix et dans un délai spécifiés devise est faite et l'organisation qui fait l'offre (la brasserie) est répertoriée avec son emplacement dans la rue.</p>
+
+        <h4 id="germanpuritylaw">5.2 La Loi Allemande sur la Pureté de la Bière</h4>
+  
+        <p><a href="exampleRDF3">Exemple 3</a> La loi allemande sur la pureté de la bière de 1516 fixait des limites strictes aux ingrédients autorisés dans la bière : eau, orge, houblon et (plus tard) levure. L'ontologie peut être utilisée pour enregistrer des données sur les bières historiques et les brasseries commerciales faisant des déclarations basées sur ce style.</p>
+        
+        importRDFExample[Une Bière baser sur la Loi Allemande sur la Pureté de la Bière][beer/germanbeer.owl] 
+                     
+        <p>La brasserie du <a href="https://www.weltenburger.de/">Monastère de Weltenburg</a>, <a href="https://www.ur-krostitzer.de/">Ur-Krostitzer</a> (marque du groupe Radeberger) et la brasserie <a href="https://www.augustiner-braeu.de/">Augustiner-Bräu</a> brassent tous de la bière qui se qualifie comme bière de la loi Allemande sur la pureté.</p>              
+        
+        importRDFExample[Enregistrer la consommation historique de bière.][beer/germanbeerhistorical.owl] 
+        
+        <p>L'ontologie est suffisamment flexible pour enregistrer un événement historique, tel que <a href="https://en.wikipedia.org/wiki/Carl_von_Horn_(1847%E2%80%931923)">Karl Graf von Horn</a> buvant de la bière disponible localement. Son application à l'enregistrement de la consommation d'alcool pour l'analyse diététique est également possible.</p>
+                      
+        <h3 id="datasets">6. Liens avec d'autres Ensembles de Données</h3>
+        
+            <p>L'Ontologie de la Bière est liée aux classes équivalentes de <a href="https://foodon.org/">FOODON</a> et utilise <a href="https://www.gs1.org/gs1-web-vocabulary">GS1</a>, <a href="https://www.schema.org/">schema.org</a>, les ontologies <a href="https://www.w3.org/TR/vocab-ssn/">sosa/ssn</a> pour représenter les mesures et l'ontology <a href="https://www.w3.org/TR/prov-o/">prov</a> pour la provenance.</p>
+        
+        <h3 id="definition_list">7. Référence Croisée Globale</h3>
+    
+        <!-- The list of classes and properties goes here -->
+        {_azlist_}
+        <!-- End of the terms list -->
+
+        <h3 id="reference">8. Références Détaillées Pour Tous les Termes, Classes et Propriétés</h3>
+ 
+        <!-- The following is the script-generated list of classes and properties -->
+        {_terms_}
+        <!-- End of the terms list -->
+
+    <h3 id="version_history">9. Historique de l'ontologie</h3>
+            <p>Version 1.5</p>
+            <ul>
+             <li>Ajout de l'alignement des ontologies <a href="https://www.w3.org/TR/prov-o/">prov</a>/<a href="https://www.w3.org/TR/owl-time/">time</a> d'après la <a href="https://www.w3.org/TR/owl-time/#time-prov">documentation de l'ontologies Time</a>.</li>
+            </ul>
+            <p>Version 1.2</p>
+            <ul>
+              <li>Ajout d'exemples pour la brasserie ACME et les bières allemandes. </li>
+              <li>Ajout d'activités de fabrication de bière à des fins d'enregistrement. </li>
+              <li>Ajout de gs1:packaging pour l'emballage. </li>
+              <li>Ajout de métadonnées schema.org étendu </li>
+             <li>
+            </ul>
+            <p>Version 1.1</p>
+            <ul>
+             <li>Ajout des relations FoodOn.</li>
+             <li>Ajout de la classe Milk Stout et de note historique sur la législation britannique.</li>
+             <li>Importations des ontologies prov et sosa.</li>
+             <li>Correction d'un code langue incorrect.</li>
+             <li>Compatibilité rdfs ajoutée. </li>
+             <li>Compatibilité http / https ajoutée. </li>
+            </ul>
+            <p>Version 1.0</p>
+            <ul>
+             <li>Version initiale.</li>
+            </ul>
+    <h3 id="genericnotes">10. Remarques Générales</h3>
+        
+        <h4 id="storability">10.1 Stockage</h4>
+        
+            <p>La capacité de stockage a été conservée en tant que propriété dataype car il s'agit d'une propriété généralement associée à la variété de houblon, mais HSI serait une propriété observable puisque c'est ce qui est testé pour chaque lot.</p>
+        
+        <h4 id="translation">10.2 Traductions</h4>
+            
+            <p>En règle générale, s'il n'y a pas de traduction pour une étiquette, elle n'est pas ajoutée et elle est conservée dans la langue d'origine. Si la traduction est le même mot, les deux libellés seront toujours conservés.</p>
+m4_include(reasonnersFAQ-fr.html)
+        <h3 id="releasenotes">11. Notes de publication</h3>
+    
+            <p>Les termes RDF pour la bibliographie sont annotées comme non-stable due à un générateur bibliographique problématique.</p>
+            
+    <h3 id="deprecated">12. Termes Obsolètes</h3>
+    {_deprecated_}
+    
+    <h3 id="bibliography">13. Bibliographie</h3>
+     <p>Cette bibliographie est disponible comme une fichier Bibtex <a href="beer-ONTOLOGY_DATE.bib">ici</a>.</p>    
+    m4_include(beer-citations.html)
+    <!-- =====================================================================
+     ===================================================================== -->
+
+
+  </body>
+
+</html>

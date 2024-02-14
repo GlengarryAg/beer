@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xml:base="https://rdf.ag/o/guinness-lager-ingredients#"
+  xmlns="https://rdf.ag/o/guinness-lager-ingredients#"
+  xmlns:beer="https://rdf.ag/o/beer#"
+  xmlns:gs1="https://gs1.org/voc/"
+  xmlns:schema="http://schema.org/"
+  xmlns:as="http://www.w3.org/ns/activitystreams#"
+  xmlns:cc="http://creativecommons.org/ns#"
+  xmlns:cereals="https://rdf.ag/o/cerealsToo#"
+  xmlns:dbpedia="http://dbpedia.org/resource/"
+  xmlns:bibo="http://purl.org/ontology/bibo/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:doap="http://usefulinc.com/ns/doap#"
+  xmlns:eurovoc="http://eurovoc.europa.eu/"
+  xmlns:sosa="http://www.w3.org/ns/sosa/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:geonames="http://sws.geonames.org/"
+  xmlns:loc="http://id.loc.gov/vocabulary/relators/"
+  xmlns:nif="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#"
+  xmlns:oa="http://www.w3.org/ns/oa#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:prov="http://www.w3.org/ns/prov#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:skosxl="http://www.w3.org/2008/05/skos-xl#"
+  xmlns:time="http://www.w3.org/2006/time#"
+  xmlns:vann="http://purl.org/vocab/vann/"
+  xmlns:void="http://rdfs.org/ns/void#"
+  xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+  xmlns:unit="http://www.qudt.org/2.1/vocab/unit"
+  xmlns:qudt="http://www.qudt.org/2.1/schema/qudt"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+  <beer:Brewery rdf:about="guinnessBrewery">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    <rdf:type rdf:resource="https://schema.org/Organization"/>
+    <rdf:type rdf:resource="https://gs1.org/voc/Organization"/>
+    <foaf:name>Guinness</foaf:name>
+    <rdfs:comment>This description was borrowed from the official Guinness website.</rdfs:comment>
+    <schema:description xml:lang="en">It takes adventurous spirit and irrepressible ingenuity to do things the Guinness® way. From our humble beginnings in 1759 to the present day, we’ve gone to extraordinary lengths to bring you exceptional beer. But, while many milestones mark the way on our long and illustrious path, we’re not ones to rest on our laurels. As we like to put it: our greatest work is yet to come.</schema:description>
+    <schema:description xml:lang="fr">Il faut un esprit aventureux et une ingéniosité irrépressible pour faire les choses à la Guinness®. De nos modestes débuts en 1759 à nos jours, nous avons déployé des efforts extraordinaires pour vous offrir une bière d'exception. Mais si de nombreux jalons marquent le chemin de notre long et illustre chemin, nous ne sommes pas du genre à nous reposer sur nos lauriers. Comme nous aimons le dire: notre plus grand travail est encore à venir.</schema:description>
+    <schema:address>
+      <rdf:Description rdf:about="guinnessPostalAddress">
+        <rdf:type rdf:resource="https://schema.org/PostalAddress"/>
+        <schema:addressCountry>Ireland</schema:addressCountry>
+        <schema:addressRegion>Dublin 8</schema:addressRegion>
+        <schema:streetAddress>53 James’s Street St James’s Gate</schema:streetAddress>
+      </rdf:Description>
+    </schema:address>
+  </beer:Brewery>
+  
+  <schema:Product rdf:about="guinnessBlondeAmericanLager">
+    <rdf:type rdf:resource="https://gs1.org/voc/Beverage"/>
+    <rdf:type rdf:resource="https://rdf.ag/o/beer#Lager"/>
+    <gs1:brand rdf:resource="guinnessBrewery"/>
+    <rdfs:label>Guinness Blonde American Lager</rdfs:label>
+    <gs1:productName xml:lang="en">Guinness Blonde American Lager</gs1:productName>
+    <rdfs:comment>This description was borrowed from the official Guinness website.</rdfs:comment>
+    <schema:description xml:lang="en">Irish tradition meets American spirit in Guinness Blonde American lager. Complex and flavourful. Light, floral and alive with citrus. This beer is perfectly balanced with a lingering malt and biscuity finish. It’s the coming together of vibrant flavours, of character drawn from both sides of the pond. And it’s come a long way to get here.
+        
+        Aroma:  Light and hoppy with floral and citrus notes. Flavour: A complex and flavourful lager, hoppy and citrusy on the nose. Palate: Lively mouthfeel, crisp and refreshing with a long malt biscuity finish. Appearance: Golden amber coloured beer with a dense head.</schema:description>
+    <schema:description xml:lang="fr">La tradition irlandaise rencontre l'esprit américain dans la bière blonde américaine Guinness Blonde. Complexe et savoureux. Léger, floral et vivant avec des agrumes. Cette bière est parfaitement équilibrée avec une finale persistante de malt et de biscuit. C’est le rapprochement de saveurs vibrantes, de caractère tiré des deux côtés de l’étang. Et il a parcouru un long chemin pour arriver ici.
+        
+        Arôme: Léger et houblonné avec des notes florales et d'agrumes. Saveur: Une bière blonde complexe et savoureuse, houblonnée et citronnée au nez. Bouche: Bouche vive, croquante et rafraîchissante avec une longue finale de malt biscuité. Apparence: Bière de couleur ambrée dorée avec une mousse dense.</schema:description>
+    <gs1:productDescription xml:lang="en">Irish tradition meets American spirit in Guinness Blonde American lager. Complex and flavourful. Light, floral and alive with citrus. This beer is perfectly balanced with a lingering malt and biscuity finish. It’s the coming together of vibrant flavours, of character drawn from both sides of the pond. And it’s come a long way to get here.
+        
+        Aroma:  Light and hoppy with floral and citrus notes. Flavour: A complex and flavourful lager, hoppy and citrusy on the nose. Palate: Lively mouthfeel, crisp and refreshing with a long malt biscuity finish. Appearance: Golden amber coloured beer with a dense head.</gs1:productDescription>
+    <gs1:productDescription xml:lang="fr">La tradition irlandaise rencontre l'esprit américain dans la bière blonde américaine Guinness Blonde. Complexe et savoureux. Léger, floral et vivant avec des agrumes. Cette bière est parfaitement équilibrée avec une finale persistante de malt et de biscuit. C’est le rapprochement de saveurs vibrantes, de caractère tiré des deux côtés de l’étang. Et il a parcouru un long chemin pour arriver ici.
+        
+        Arôme: Léger et houblonné avec des notes florales et d'agrumes. Saveur: Une bière blonde complexe et savoureuse, houblonnée et citronnée au nez. Bouche: Bouche vive, croquante et rafraîchissante avec une longue finale de malt biscuité. Apparence: Bière de couleur ambrée dorée avec une mousse dense.</gs1:productDescription>
+    <schema:manufacturer rdf:resource="guinnessBrewery"/>
+    <schema:recipeIngredient>Mosaic Hops</schema:recipeIngredient>
+    <schema:recipeIngredient>Willamette Hops</schema:recipeIngredient>
+    <schema:recipeIngredient>Mount Hood Hops</schema:recipeIngredient>
+    <schema:recipeIngredient>Water</schema:recipeIngredient>
+    <schema:recipeIngredient>Guinness Yeast</schema:recipeIngredient>
+    <schema:recipeIngredient>Malts</schema:recipeIngredient>
+  </schema:Product>
+  
+  <schema:Product rdf:about="guinnessBlondeAmericanLagerCan473">
+    <schema:isVariantOf rdf:resource="guinnessBlondeAmericanLager"/>
+    <rdf:type rdf:resource="https://rdf.ag/o/beer#can473"/>
+  </schema:Product>
+  
+  <schema:Product rdf:about="guinnessBlondeAmericanLagerKeg">
+    <schema:isVariantOf rdf:resource="guinnessBlondeAmericanLager"/>
+    <rdf:type rdf:resource="https://rdf.ag/o/beer#sixthBarrelKeg"/>
+  </schema:Product>
+  
+  <schema:Offer rdf:about="guinnessBlondeAmericanLagerCan473Offer">
+    <rdf:type rdf:resource="guinnessBlondeAmericanLagerCan473"/>
+    <schema:availability rdf:resource="https://schema.org/InStock"/>
+    <schema:offeredBy>
+     <foaf:Organization rdf:about="lcbo">
+      <rdf:type rdf:resource="https://gs1.org/voc/Organization"/>
+      <rdf:type rdf:resource="https://schema.org/Organization"/>
+      <foaf:name>LCBO</foaf:name>
+      <skos:definition>Liquor Control Board of Ontario is a corporation of the Crown that distributes and sells alcoholic beverages throughout Ontario.</skos:definition>
+      <schema:address>
+       <rdf:Description rdf:about="lcboOttawaRichmondPostalAddress">
+        <schema:addressCountry>Canada</schema:addressCountry>
+        <schema:addressRegion>Ontario</schema:addressRegion>
+        <schema:addressLocality>Ottawa</schema:addressLocality>
+        <schema:postalCode>K1Z 6W6</schema:postalCode>
+        <schema:streetAddress>222 Richmond Rd</schema:streetAddress>
+       </rdf:Description>
+      </schema:address>
+     </foaf:Organization>
+    </schema:offeredBy>
+    <schema:price>2.70</schema:price>
+    <schema:priceCurrency>CAD</schema:priceCurrency>
+  </schema:Offer>
+    
+  <schema:Offer rdf:about="guinnessBlondeAmericanLagerKegOffer">
+    <rdf:type rdf:resource="guinnessBlondeAmericanLagerKeg"/>
+    <schema:availability rdf:resource="https://schema.org/InStock"/>
+    <schema:offeredBy>
+     <foaf:Organization rdf:about="lcbo">
+      <rdf:type rdf:resource="https://gs1.org/voc/Organization"/>
+      <rdf:type rdf:resource="https://schema.org/Organization"/>
+      <foaf:name>Rozi's Wine House</foaf:name>
+      <skos:definition>Rozi's Wine House is home to Greater Cleveland’s best beer and wine selection for over 80 years.</skos:definition>
+      <schema:address>
+       <rdf:Description rdf:about="roziWineHousePostalAddress">
+        <rdf:type rdf:resource="https://schema.org/PostalAddress"/>
+        <schema:addressCountry>USA</schema:addressCountry>
+        <schema:addressRegion>Ohio</schema:addressRegion>
+        <schema:addressLocality>Lakewood</schema:addressLocality>
+        <schema:postalCode>44107</schema:postalCode>
+        <schema:streetAddress>14900 Detroit Avenue</schema:streetAddress>
+       </rdf:Description>
+      </schema:address>
+     </foaf:Organization>
+    </schema:offeredBy>
+    <schema:price>81.99</schema:price>
+    <schema:priceCurrency>USD</schema:priceCurrency>
+  </schema:Offer>
+      
+</rdf:RDF>
+

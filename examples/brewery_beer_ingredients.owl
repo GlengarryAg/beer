@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xml:base="https://rdf.ag/o/brewery_beer_ingredients#"
+  xmlns="https://rdf.ag/o/brewery_beer_ingredients#"
+  xmlns:gs1="https://gs1.org/voc/"
+  xmlns:schema="http://schema.org/"
+  xmlns:as="http://www.w3.org/ns/activitystreams#"
+  xmlns:cc="http://creativecommons.org/ns#"
+  xmlns:cereals="https://rdf.ag/o/cerealsToo#"
+  xmlns:dbpedia="http://dbpedia.org/resource/"
+  xmlns:bibo="http://purl.org/ontology/bibo/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:doap="http://usefulinc.com/ns/doap#"
+  xmlns:eurovoc="http://eurovoc.europa.eu/"
+  xmlns:sosa="http://www.w3.org/ns/sosa/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:beer="https://rdf.ag/o/beer#"
+  xmlns:geonames="http://sws.geonames.org/"
+  xmlns:loc="http://id.loc.gov/vocabulary/relators/"
+  xmlns:nif="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#"
+  xmlns:oa="http://www.w3.org/ns/oa#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:prov="http://www.w3.org/ns/prov#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:skosxl="http://www.w3.org/2008/05/skos-xl#"
+  xmlns:time="http://www.w3.org/2006/time#"
+  xmlns:vann="http://purl.org/vocab/vann/"
+  xmlns:void="http://rdfs.org/ns/void#"
+  xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+  xmlns:unit="http://www.qudt.org/2.1/vocab/unit"
+  xmlns:qudt="http://www.qudt.org/2.1/schema/qudt"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+  
+  <owl:ObjectProperty rdf:ID="hasIngredient">
+    <rdfs:label xml:lang="en">Has Ingredient</rdfs:label>
+    <rdfs:label xml:lang="fr">A un ingrédient</rdfs:label>
+    <skos:definition xml:lang="en">This property is used to provide more information on an ingredient or ingredients of a food or beverage.</skos:definition>
+    <skos:definition xml:lang="fr">Cette propriété est utilisée pour fournir plus d'informations sur un ingrédient ou des ingrédients d'un aliment ou d'une boisson.</skos:definition>
+   </owl:ObjectProperty>
+      
+  <beer:Brewery rdf:about="acmeBrewery">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    <rdf:type rdf:resource="https://schema.org/Organization"/>
+    <rdf:type rdf:resource="https://gs1.org/voc/Organization"/>
+    <foaf:name>Acme Brewery</foaf:name>
+    <schema:description xml:lang="en">Acme brewery uses the very best ingredients to brew the greatest beer of all time.</schema:description>
+    <schema:description xml:lang="fr">La brasserie Acme utilise les meilleurs ingrédients pour brasser la meilleure bière de tous les temps.</schema:description>
+    <schema:address>
+      <rdf:Description rdf:about="acmePostalAddress">
+        <rdf:type rdf:resource="https://schema.org/PostalAddress"/>
+        <schema:addressCountry>Canada</schema:addressCountry>
+        <schema:addressRegion>Ontario</schema:addressRegion>
+        <schema:addressLocality>Peterborough</schema:addressLocality>
+        <schema:postalCode>K9J 6X1</schema:postalCode>
+        <schema:streetAddress>15 Main Street</schema:streetAddress>
+      </rdf:Description>
+    </schema:address>
+  </beer:Brewery>
+  
+  <schema:Product rdf:about="acmeBestStout">
+    <rdf:type rdf:resource="https://gs1.org/voc/Beverage"/>
+    <rdf:type rdf:resource="https://rdf.ag/o/beer#Stout"/>
+    <gs1:brand rdf:resource="acmeBrewery"/>
+    <rdfs:label xml:lang="en">The Best Stout</rdfs:label>
+    <gs1:productName xml:lang="en">The Best Stout</gs1:productName>
+    <schema:description xml:lang="en">The Best Stout uses premium Cascade and Centennial hops, the absolute best saccharomyces cerevisiae yeast, Jonathan Goldsmith-endorsed chocolate 2-row malt and water harvested from a Demi-God's tears.</schema:description>
+    <schema:description xml:lang="fr">The Best Stout utilise du houblon Cascade de première qualité, la meilleure levure saccharomyces cerevisiae, du malt au chocolat à 2 rangs approuvé par Jonathan Goldsmith et de l'eau récoltée dans les larmes d'un Demi-Dieu.</schema:description>
+    <gs1:productDescription xml:lang="en">The Best Stout uses premium Cascade and Centennial hops, the absolute best saccharomyces cerevisiae yeast, Jonathan Goldsmith-endorsed chocolate 2-row malt and water harvested from a Demi-God's tears.</gs1:productDescription>
+    <gs1:productDescription xml:lang="fr">The Best Stout utilise du houblon Cascade de première qualité, la meilleure levure saccharomyces cerevisiae, du malt au chocolat à 2 rangs approuvé par Jonathan Goldsmith et de l'eau récoltée dans les larmes d'un Demi-Dieu.</gs1:productDescription>
+    <schema:manufacturer rdf:resource="acmeBrewery"/>
+    <schema:recipeIngredient>Premium Cascade Hops</schema:recipeIngredient>
+    <schema:recipeIngredient>Premium Centennial Hops</schema:recipeIngredient>
+    <schema:recipeIngredient>Best Saccharomyces Cerevisiae</schema:recipeIngredient>
+    <schema:recipeIngredient>Jonathan Goldsmith-endorsed Chocolate 2-row Malt</schema:recipeIngredient>
+    <schema:recipeIngredient>Water from a Demi-God's Tears</schema:recipeIngredient>
+    <gs1:ingredient>
+     <gs1:FoodBeverageTobaccoIngredientDetails rdf:about="bestStoutWater">
+      <gs1:ingredientContentPercentage>70</gs1:ingredientContentPercentage>
+      <gs1:ingredientName>Water</gs1:ingredientName>
+      <gs1:ingredientSequence>1</gs1:ingredientSequence>
+     </gs1:FoodBeverageTobaccoIngredientDetails>
+    </gs1:ingredient>
+    <gs1:ingredient>
+     <gs1:FoodBeverageTobaccoIngredientDetails rdf:about="bestStoutMalt">
+      <gs1:ingredientContentPercentage>20</gs1:ingredientContentPercentage>
+      <gs1:ingredientName>Malt</gs1:ingredientName>
+      <gs1:ingredientSequence>2</gs1:ingredientSequence>
+     </gs1:FoodBeverageTobaccoIngredientDetails>
+    </gs1:ingredient>
+    <gs1:ingredient>
+     <gs1:FoodBeverageTobaccoIngredientDetails rdf:about="bestStoutHopsCascade">
+      <gs1:ingredientContentPercentage>4.75</gs1:ingredientContentPercentage>
+      <gs1:ingredientName>Cascade Hops</gs1:ingredientName>
+      <gs1:ingredientSequence>3</gs1:ingredientSequence>
+     </gs1:FoodBeverageTobaccoIngredientDetails>
+    </gs1:ingredient>
+    <gs1:ingredient>
+     <gs1:FoodBeverageTobaccoIngredientDetails rdf:about="bestStoutHopsCentennial">
+      <gs1:ingredientContentPercentage>4.75</gs1:ingredientContentPercentage>
+      <gs1:ingredientName>Centennial Hops</gs1:ingredientName>
+      <gs1:ingredientSequence>4</gs1:ingredientSequence>
+     </gs1:FoodBeverageTobaccoIngredientDetails>
+    </gs1:ingredient>
+    <gs1:ingredient>
+     <gs1:FoodBeverageTobaccoIngredientDetails rdf:about="bestStoutYeast">
+      <gs1:ingredientContentPercentage>0.5</gs1:ingredientContentPercentage>
+      <gs1:ingredientName>Saccharomyces Cerevisiae</gs1:ingredientName>
+      <gs1:ingredientSequence>5</gs1:ingredientSequence>
+     </gs1:FoodBeverageTobaccoIngredientDetails>
+    </gs1:ingredient>
+    <hasIngredient rdf:resource="https://rdf.ag/o/hops#HopsCascadeUS"/>
+    <hasIngredient rdf:resource="https://rdf.ag/o/hops#opsCentennial"/>
+    <hasIngredient>Best Saccharomyces Cerevisiae</hasIngredient>
+    <hasIngredient>Jonathan Goldsmith-endorsed Chocolate 2-row Malt</hasIngredient>
+    <hasIngredient>Water from Poland Springs</hasIngredient>
+  </schema:Product>
+  
+  <schema:Product rdf:about="acmeBestStoutKeg">
+    <schema:isVariantOf rdf:resource="acmeBestStout"/>
+    <rdf:type rdf:resource="https://rdf.ag/o/beer#corneliusKeg"/>
+    <schema:offers rdf:resource="acmeBestStoutKegOffer"/>
+  </schema:Product>
+  
+ <schema:Product rdf:about="acmeBestStout473Can">
+  <schema:isVariantOf rdf:resource="acmeBestStout"/>
+  <rdf:type rdf:resource="https://rdf.ag/o/beer#can473"/>
+  <schema:offers>
+   <schema:Offer rdf:about="acmeBestStout473CanOffer">
+    <schema:availability rdf:resource="https://schema.org/InStock"/>
+    <schema:price>3.50</schema:price>
+    <schema:priceCurrency>CAD</schema:priceCurrency>
+    <schema:offeredBy>
+     <foaf:Organization rdf:about="acmeBrewery">
+      <rdf:type rdf:resource="https://gs1.org/voc/Organization"/>
+      <rdf:type rdf:resource="https://schema.org/Organization"/>
+       <schema:address>
+        <rdf:Description rdf:about="acmePostalAddress">
+         <rdf:type rdf:resource="https://schema.org/PostalAddress"/>
+         <schema:addressCountry>Canada</schema:addressCountry>
+         <schema:addressRegion>Ontario</schema:addressRegion>
+         <schema:addressLocality>Peterborough</schema:addressLocality>
+         <schema:postalCode>K9J 6X1</schema:postalCode>
+         <schema:streetAddress>15 Main Street</schema:streetAddress>
+        </rdf:Description>
+       </schema:address>
+     </foaf:Organization>
+    </schema:offeredBy>
+   </schema:Offer>
+  </schema:offers>
+ </schema:Product>
+    
+ <schema:Offer rdf:about="acmeBestStoutKegOffer">
+    <schema:availability rdf:resource="https://schema.org/InStock"/>
+    <schema:price>150</schema:price>
+    <schema:priceCurrency>CAD</schema:priceCurrency>
+    <schema:offeredBy rdf:resource="acmeBrewery"/>
+ </schema:Offer>
+      
+</rdf:RDF>
