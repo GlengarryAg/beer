@@ -22,10 +22,10 @@
 
 {_header_}
 
-<p class="copyright">Pour les raisons de droit d'auteur, cette oeuvre a tous ses droits réservés par Myra Analytics. &#169; 2021</p>
+<p class="copyright">Pour les raisons de droit d'auteur, cette oeuvre a tous ses droits réservés par PSW Applied Research Inc. &#169; 2024</p>
 
     <p class="copyright">
-    Cette oeuvre est disponible sous une double licence <a href="https://creativecommons.org/licenses/by/3.0/"> licence Creative Commons Attribution 3.0 Unported</a> et une licence commerciale supplémentaire. Veuillez contacter info@myraanalytics.ca pour plus de détails. </p>
+    Cette oeuvre est disponible sous une double licence <a href="https://creativecommons.org/licenses/by/3.0/"> licence Creative Commons Attribution 3.0 Unported</a> et une licence commerciale supplémentaire. Veuillez contacter info@pswappliedresearch.com pour plus de détails. </p>
     </p>
     
 
@@ -120,19 +120,19 @@
         
         <p>Comme <a href="https://rdf.ag/o/beer#Brewery">beer:Brewery</a> est une classe qui étend <a href="https://schema.org/Organization ">schema:Organization</a>, <a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a> et <a href="https://gs1.org/voc/Organisation">gs1:Organization</a>. Cela permet l'utilisation d'un large écosystème de vocabulaires et l'adresse postale de la brasserie fictive est enregistrée avec elle. Alors que de nombreux auteurs préfèrent utiliser des nœuds vides par souci de concision, nous nommons les nœuds ici afin que les exemples de fragments puissent être liés les uns aux autres tout en étant courts.</p>
         
-        importRDFExample[La Brasserie ACME, notre Brasserie locale.][beer/acme-brewery.owl]
+        importRDFExample[La Brasserie ACME, notre Brasserie locale.][examples/acme-brewery.owl]
         
         <p>Notre brasserie fictive brasse deux bières différentes : ACME Ale et ACME Best Stout. Dans l'ontologie de la bière, une <a href="https://rdf.ag/o/beer#Beer">beer:Beer</a> est une boisson qui est une instance d'un style de bière avec une marque, un nom ou un fabricant commun sans référence à la quantité ou à l'emballage.</p>
         
         <p>Une bière peut être liée à sa brasserie à travers plusieurs vocabulaire tel que <a href="https://schema.org/manufacturer">schema:manufacturer</a>, <a href="https://gs1.org/voc/brand">gs1:brand</a>, <a href="https://gs1.org/voc/manufacturer">gs1:manufacturer</a> ou même <a href="http://purl.org/dc/terms/creator">dcterms:creator</a>. Pour les utilisateurs qui souhaitent simplement enregistrer une relation générale peuvent utiliser la propriété <a href="https://rdf.ag/o/beer#brewedBy">beer:brewedBy</a> qui est facilement compréhensible et peut s'aligner sur la plupart des cas ontologiques.</p> 
         
-        importRDFExample[Les Bières de la Brasserie ACME][beer/acme-brewery-beers.owl]
+        importRDFExample[Les Bières de la Brasserie ACME][examples/acme-brewery-beers.owl]
         
         <p>Une <a href="https://rdf.ag/o/beer#BeverageProduct">Beer:BeverageProduct</a> est une <a href="https://rdf.ag/o/beer#Beer">Beer:Beer</a> contenue dans un conteneur pouvant être déplacé ou échangé. Dans le langage Schema.org, une <a href="https://rdf.ag/o/beer#Beer">Beer:Beer</a> est une <a href="https://schema.org/ProductGroup ">schema:ProductGroup</a> qui a <a href="https://rdf.ag/o/beer#BeverageProduct">Beer:BeverageProduct</a> pour <a href="https://schema.org/hasVariant">schema:hasVariant</a>s. Cela relie essentiellement la bière en tant que produit abstrait à sa disponibilité matérialisée en tant que produit consommable discret en reliant le <a href="https://rdf.ag/o/beer#BeverageProduct">Beer:BeverageProduct</a> à son contenant en utilisant une propriété <a href="https://gs1.org/voc/package">gs1:package</a>.<p>
    
         <p>Ainsi, si nos deux bières sont exclusivement disponibles dans des canettes en aluminium de 473 ml, nous pouvons définir les propriétés de l'emballage en référençant le <a href="#can473">#can473</a> et en écrivant:</p>
         
-        importRDFExample[Les bières en canette de la Brasserie ACME.][beer/acme-brewery-products.owl]
+        importRDFExample[Les bières en canette de la Brasserie ACME.][examples/acme-brewery-products.owl]
         
         <p>Chaque nouvel emballage ou conteneur nécessite une nouvelle instance d'un <a href="https://rdf.ag/o/beer#BeverageProduct">Beer:BeverageProduct</a>.</p>
 
@@ -140,7 +140,7 @@
         
         <p><a href="exampleRDF2">Exemple 2</a> Dans cet exemple, nous créons une offre schema.org qui annoncera que la bière est disponible à la vente dans le commerce. La brasserie ACME dispose d'un comptoir de vente sur place qui vendra des canettes individuelles en aluminium de 473 ml de stout.</p>
        
-        importRDFExample[Les offres de vente de la Brasserie ACME.][beer/brewery_beer.owl]
+        importRDFExample[Les offres de vente de la Brasserie ACME.][examples/brewery_beer.owl]
         
         <p>L'ajout d'un <a href="https://schema.org/Offer">schema:Offer</a> pour la canette, à un prix et dans un délai spécifiés devise est faite et l'organisation qui fait l'offre (la brasserie) est répertoriée avec son emplacement dans la rue.</p>
 
@@ -148,11 +148,11 @@
   
         <p><a href="exampleRDF3">Exemple 3</a> La loi allemande sur la pureté de la bière de 1516 fixait des limites strictes aux ingrédients autorisés dans la bière : eau, orge, houblon et (plus tard) levure. L'ontologie peut être utilisée pour enregistrer des données sur les bières historiques et les brasseries commerciales faisant des déclarations basées sur ce style.</p>
         
-        importRDFExample[Une Bière baser sur la Loi Allemande sur la Pureté de la Bière][beer/germanbeer.owl] 
+        importRDFExample[Une Bière baser sur la Loi Allemande sur la Pureté de la Bière][examples/germanbeer.owl] 
                      
         <p>La brasserie du <a href="https://www.weltenburger.de/">Monastère de Weltenburg</a>, <a href="https://www.ur-krostitzer.de/">Ur-Krostitzer</a> (marque du groupe Radeberger) et la brasserie <a href="https://www.augustiner-braeu.de/">Augustiner-Bräu</a> brassent tous de la bière qui se qualifie comme bière de la loi Allemande sur la pureté.</p>              
         
-        importRDFExample[Enregistrer la consommation historique de bière.][beer/germanbeerhistorical.owl] 
+        importRDFExample[Enregistrer la consommation historique de bière.][examples/germanbeerhistorical.owl] 
         
         <p>L'ontologie est suffisamment flexible pour enregistrer un événement historique, tel que <a href="https://en.wikipedia.org/wiki/Carl_von_Horn_(1847%E2%80%931923)">Karl Graf von Horn</a> buvant de la bière disponible localement. Son application à l'enregistrement de la consommation d'alcool pour l'analyse diététique est également possible.</p>
                       

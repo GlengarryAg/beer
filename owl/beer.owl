@@ -60,7 +60,7 @@
     <vs:term_status xml:lang="fr">Stable</vs:term_status>
     <void:inDataset rdf:resource="#datasetdefinition"/>
     <dcterms:creator rdf:resource="#singer"/>
-    <dcterms:creator rdf:resource="#myra"/>
+    <dcterms:creator rdf:resource="#psw"/>
     <dcterms:creator rdf:resource="#warren"/>
     <owl:imports rdf:resource="http://www.w3.org/ns/sosa/"/>
     <owl:imports rdf:resource="http://www.w3.org/ns/ssn/"/>
@@ -95,7 +95,7 @@
     <schema:identifier>https://rdf.ag/o/beer</schema:identifier>
     <schema:license>https://creativecommons.org/licenses/by/3.0/</schema:license>
     <schema:license>Dual license. All rights reserved.</schema:license>
-    <schema:creator rdf:resource="#myra"/>
+    <schema:creator rdf:resource="#psw"/>
     <schema:creator rdf:resource="#warren"/>
     <schema:creator rdf:resource="#singer"/>
     <schema:keywords>Beer</schema:keywords>    
@@ -142,24 +142,26 @@
     <void:triples>TOTAL_TRIPLES_ONTOLOGY</void:triples>
     <void:entities>TOTAL_ENTITIES_ONTOLOGY</void:entities>
     <dcterms:subject rdf:resource="http://id.loc.gov/authorities/subjects/sh85012832"/>
-    <dcterms:creator rdf:resource="#myra"/>
-    <dcterms:creator rdf:resource="#singer"/>
-    <dcterms:creator rdf:resource="#warren"/>
+    <dcterms:creator rdf:resource="#psw"/>
   </void:Dataset>
   
-  <foaf:Organization rdf:about="#myra">
+  <foaf:Organization rdf:about="#osw">
    <rdf:type rdf:resource="https://schema.org/Organization"/>
    <rdf:type rdf:resource="https://gs1.org/voc/Organization"/>
-   <gs1:organizationName>Myra Analytics</gs1:organizationName>
-   <foaf:name>Myra Analytics</foaf:name>
-   <schema:name>Myra Analytics</schema:name>
-   <rdfs:label>Myra Analytics</rdfs:label>
+   <gs1:organizationName>PSW Applied Research Inc.</gs1:organizationName>
+   <foaf:name>PSW Applied Research Inc.</foaf:name>
+   <schema:name>PSW Applied Research Inc.</schema:name>
+   <rdfs:label>PSW Applied Research Inc.</rdfs:label>
    <schema:contactPoint>
-    <schema:ContactPoint rdf:about="#myraContactPoint">
+    <schema:ContactPoint rdf:about="#pswContactPoint">
      <schema:contactType>customer service</schema:contactType>
-     <schema:email>info@myraanalytics.ca</schema:email>
+     <schema:email>info@pswappliedresearch.com</schema:email>
+     <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/beer-ONTOLOGY_DATE"/>
+     <void:inDataset rdf:resource="#datasetdefinition"/>
     </schema:ContactPoint>
    </schema:contactPoint>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/beer-ONTOLOGY_DATE"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </foaf:Organization>
   
   <foaf:Person rdf:about="#singer">
@@ -13421,6 +13423,24 @@
   <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/beer-ONTOLOGY_DATE"/>
   <void:inDataset rdf:resource="#datasetdefinition"/>
  </cs:ChangeSet>
+
+ <cs:ChangeSet rdf:about="#4b4f5e5d9365558e0e2cd66a6ffb2f44">
+  <cs:precedingChangeSet rdf:resource="#8287522d0a97511a1ae6f711d969f799"/>
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+  <prov:wasAttributedTo rdf:resource="#warren"/>
+  <cs:addition rdf:resource="#psw"/>
+  <cs:removal rdf:resource="#myra"/>
+  <cs:creatorName>Rob Warren</cs:creatorName>
+  <cs:createdDate>2024-02-14</cs:createdDate>
+  <prov:endedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-02-14T16:14:43-04:00</prov:endedAtTime>
+  <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-02-14T16:14:43-04:00</prov:startedAtTime>
+  <cs:changeReason>Update ontology ownership and change tracking.</cs:changeReason>
+  <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/beer-ONTOLOGY_DATE"/>
+  <void:inDataset rdf:resource="#datasetdefinition"/>
+ </cs:ChangeSet>  
+  
+  
 
 
 <!-- Various OWL compatibility statements. -->
