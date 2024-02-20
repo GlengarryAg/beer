@@ -670,6 +670,13 @@
      <skos:definition xml:lang="fr">Une brasserie est une entreprise ou un lieu qui produit de la bière.</skos:definition>
      <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/beer-ONTOLOGY_DATE"/>
      <void:inDataset rdf:resource="#datasetdefinition"/>
+     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/org#Organization"/>
+     <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Location"/>
+     <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+     <rdfs:subClassOf rdf:resource="https://gs1.org/voc/Organization"/>
+     <rdfs:subClassOf rdf:resource="https://schema.org/Organization"/>
  </owl:Class>
  
  <owl:Class rdf:ID="Craftbrewery">
@@ -747,6 +754,13 @@
      <skos:definition xml:lang="fr">Un hors-permis est un magasin autorisé à vendre de l'alcool, attaché ou associé à une brasserie. </skos:definition>
      <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/beer-ONTOLOGY_DATE"/>
      <void:inDataset rdf:resource="#datasetdefinition"/>
+     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/org#Organization"/>
+     <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Location"/>
+     <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+     <rdfs:subClassOf rdf:resource="https://gs1.org/voc/Organization"/>
+     <rdfs:subClassOf rdf:resource="https://schema.org/Organization"/>
  </owl:Class>
  
  <owl:Class rdf:ID="Beverage">
@@ -902,6 +916,13 @@
      <skos:definition xml:lang="fr">Un local où la distillation, aux fins de la fabrication d'alcool consommable, a lieu.</skos:definition>
      <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/beer-ONTOLOGY_DATE"/>
      <void:inDataset rdf:resource="#datasetdefinition"/>
+     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/org#Organization"/>
+     <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Location"/>
+     <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+     <rdfs:subClassOf rdf:resource="https://gs1.org/voc/Organization"/>
+     <rdfs:subClassOf rdf:resource="https://schema.org/Organization"/>
  </owl:Class>
  
  <owl:Class rdf:ID="BeverageProduct">
@@ -13432,6 +13453,23 @@
   <prov:endedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-02-14T16:14:43-04:00</prov:endedAtTime>
   <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-02-14T16:14:43-04:00</prov:startedAtTime>
   <cs:changeReason>Update ontology ownership and change tracking.</cs:changeReason>
+  <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/beer-ONTOLOGY_DATE"/>
+  <void:inDataset rdf:resource="#datasetdefinition"/>
+ </cs:ChangeSet>  
+
+ <cs:ChangeSet rdf:about="#f7afcbbdabbc5c2caabcbf6e173597af">
+  <cs:precedingChangeSet rdf:resource="#4b4f5e5d9365558e0e2cd66a6ffb2f44"/>
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+  <prov:wasAttributedTo rdf:resource="#warren"/>
+  <cs:statement rdf:resource="#Distillery"/>
+  <cs:statement rdf:resource="#Brewery"/>
+  <cs:statement rdf:resource="#OffLicense"/>
+  <cs:creatorName>Rob Warren</cs:creatorName>
+  <cs:createdDate>2024-02-20</cs:createdDate>
+  <prov:endedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-02-20T14:59:32-04:00</prov:endedAtTime>
+  <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-02-20T14:59:32-04:00</prov:startedAtTime>
+  <cs:changeReason>Ensure that breweries, distilleries, taprooms and offsales are proper locations. These are now subclasses of gs1:Organization, schema:Organization, org:Organization, foaf:Organization, prov:Agent, prov:Location and geosparql:Feature.</cs:changeReason>
   <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/beer-ONTOLOGY_DATE"/>
   <void:inDataset rdf:resource="#datasetdefinition"/>
  </cs:ChangeSet>  
