@@ -59,9 +59,7 @@
     <vs:term_status xml:lang="en">Stable</vs:term_status>
     <vs:term_status xml:lang="fr">Stable</vs:term_status>
     <void:inDataset rdf:resource="#datasetdefinition"/>
-    <dcterms:creator rdf:resource="#singer"/>
     <dcterms:creator rdf:resource="#psw"/>
-    <dcterms:creator rdf:resource="#warren"/>
     <owl:imports rdf:resource="http://www.w3.org/ns/sosa/"/>
     <owl:imports rdf:resource="http://www.w3.org/ns/ssn/"/>
     <owl:imports rdf:resource="http://www.w3.org/ns/prov#"/>
@@ -96,8 +94,6 @@
     <schema:license>https://creativecommons.org/licenses/by/3.0/</schema:license>
     <schema:license>Dual license. All rights reserved.</schema:license>
     <schema:creator rdf:resource="#psw"/>
-    <schema:creator rdf:resource="#warren"/>
-    <schema:creator rdf:resource="#singer"/>
     <schema:keywords>Beer</schema:keywords>    
     <schema:keywords>Brewing</schema:keywords>    
     <schema:keywords>Cider</schema:keywords> 
