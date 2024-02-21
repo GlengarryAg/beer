@@ -1,11 +1,10 @@
 # beer
 An OWL2 ontology about Beer, it's styles and ingredients.  
 
-Current Version: 1.2   
-Release Date: 2021-03-24   
+Current Version: 1.3   
+Release Date: 2024-02-21   
 Suggested prefix: beer   
-Current release: https://rdf.ag/o/beer-2021-03-24   
-
+Current release: https://rdf.ag/o/beer-2024-02-21
 
 
 This is a public repository for issues pertaining to the Beer Ontology.  These are the individual build files used by the

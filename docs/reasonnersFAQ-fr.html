@@ -1,0 +1,40 @@
+
+<p>La promesse du <a href="https://en.wikipedia.org/wiki/Resource_Description_Framework">Resource Description Framework</a>
+est en deux parties: un knowledge graph distribué avec des
+identifiants URL et du support de raisonnement pour faire des déclarations à leur sujet.
+La <i>syntaxe</i> de données RDF a été largement adoptée dans plusieurs
+applications utilisant différentes sérialisations (rdf / xml, json-ld, turtle, etc ...),
+y compris la bibliographie, l'optimisation des moteurs de recherche et les intégrations d'API.
+Parfois, les fournisseurs offriront même les données dans plusieurs sérialisations
+en utilisant la négociation de contenu HTTP pour laisser les clients choisir la meilleur
+sérialisation.</p>
+ 
+<p>La promesse de RDF avec une solide gestion des connaissances par le biais de normes tel que <a
+href="https://www.w3.org/TR/rdf-schema/">RDF/S</a>, <a
+href="https://www.w3.org/TR/owl2-primer/">OWL</a> et maintenant <a
+href="https://www.w3.org/TR/shacl/">SHACL</a>
+reste à être pleinement réalisé car
+de nombreux fournisseurs de données considèrent le RDF comme un mécanisme de schéma plutôt que de la gestion de la connaissance
+ou de l'ontologique.</p>
+
+<p>Les ontologies W3 <a href="https://www.w3.org/TR/owl-time/">time</a>, <a href="https://www.w3.org/TR/prov-o/">prov</a> et
+<a href="https://www.w3.org/TR/vocab-ssn/">SOSA/SSN</a> sont utilisés comme base pour la plupart des termes, <a
+href="https://bibliontology.com/">Bibo</a> pour les références bibliogrphiques et l'OGC <a
+href="https://www.ogc.org/standards/geosparql">GeoSparql</a> 
+est utilisée pour les données spatiales. D'autres ontologies sont utilisés
+selon les besoins du  domaine. Les données commerciales et industrielles sont enregistrées en utilisant à la fois le
+<a href="https://schema.org">schema.org</a> et <a href="https://www.gs1.org/voc/">GS1 webvoc</a>.
+Dans la mesure du possible, physique
+les mesures physique sont rapportées en unités impériales et métriques en utilisant
+les ontologies <a href="https://www.qudt.org/">qudt</a> et <a href="http://www.obofoundry.org/">obo</a>.</p>
+
+<p>Cette ontologie est conçue pour être utilisée à la fois comme une ontologie à part entière (en RDF/S et OWL) avec une capacité
+de raisonnement complexe et une base de données basé sur un schéma pour des requêtes simples. A ce titre, elle contient une
+quantité importante d'informations redondantes et propriétés matérialisées conçues pour maintenir la compatibilité
+et l'utilité dans plusieurs environnements. Les développeurs qui sont habitué à lire l'information RDF brute pour localiser les
+informations pertinentes peut trouver plus facile de construire une requête directement à partir de la documentation plutôt que de
+lire le code machine.</p>
+
+<p>Enfin, si peu d'environnements peuvent utilisés OWL à pleine capacité, cet l'ontologie est utile dans le développement
+d'applications nécessitant  l'étiquetage multilingue, la traduction de termes et identificateurs d'entité à long
+terme pour la génération de formulaire et rapport.</p>
