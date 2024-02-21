@@ -13427,6 +13427,48 @@
  <void:inDataset rdf:resource="#datasetdefinition"/>
 </rdf:Description>
 
+<!-- Prov/time Glue see https://www.w3.org/TR/owl-time/#time-prov-->
+
+<rdf:Description rdf:about="http://www.w3.org/ns/prov#Activity">
+ <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/ns/prov#InstantaneousEvent">
+ <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/ns/prov#atTime">
+ <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/time#inXSDDateTime"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/ns/prov#endedAtTime">
+ <owl:propertyChainAxiom>
+  <rdf:Description>
+   <rdf:first rdf:resource="http://www.w3.org/ns/prov#hasEnd"/>
+    <rdf:rest>
+     <rdf:Description>
+      <rdf:first rdf:resource="http://www.w3.org/ns/prov#inXSDDateTime"/>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+     </rdf:Description>
+    </rdf:rest>
+   </rdf:Description>
+  </owl:propertyChainAxiom>
+ </rdf:Description>
+ <rdf:Description rdf:about="http://www.w3.org/ns/prov#startedAtTime">
+  <owl:propertyChainAxiom>
+   <rdf:Description>
+    <rdf:first rdf:resource="http://www.w3.org/ns/prov#hasBeginning"/>
+     <rdf:rest>
+      <rdf:Description>
+       <rdf:first rdf:resource="http://www.w3.org/ns/prov#inXSDDateTime"/>
+       <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+      </rdf:Description>
+     </rdf:rest>
+    </rdf:Description>
+   </owl:propertyChainAxiom>
+ </rdf:Description>
+ 
+
  <cs:ChangeSet rdf:about="#8287522d0a97511a1ae6f711d969f799">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
   <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
@@ -13436,9 +13478,11 @@
   <cs:createdDate>2024-02-14</cs:createdDate>
   <prov:endedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-02-14T16:00:00-04:00</prov:endedAtTime>
   <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-02-14T16:00:00-04:00</prov:startedAtTime>
-  <cs:changeReason>Added Braggot as a beer type.</cs:changeReason>
+  <cs:changeReason xml:lang="en">Added Braggot as a beer type.</cs:changeReason>
+  <cs:changeReason xml:lang="fr">Ajout de Braggot comme type de bière.</cs:changeReason>
   <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/beer-ONTOLOGY_DATE"/>
   <void:inDataset rdf:resource="#datasetdefinition"/>
+  <owl:versionInfo>1.3</owl:versionInfo>
  </cs:ChangeSet>
 
  <cs:ChangeSet rdf:about="#4b4f5e5d9365558e0e2cd66a6ffb2f44">
@@ -13452,9 +13496,11 @@
   <cs:createdDate>2024-02-14</cs:createdDate>
   <prov:endedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-02-14T16:14:43-04:00</prov:endedAtTime>
   <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-02-14T16:14:43-04:00</prov:startedAtTime>
-  <cs:changeReason>Update ontology ownership and change tracking.</cs:changeReason>
+  <cs:changeReason xml:lang="en">Update ontology ownership and change tracking.</cs:changeReason>
+  <cs:changeReason xml:lang="fr">Mise à jour des propriétés de l’ontologie et le suivi des modifications.</cs:changeReason>
   <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/beer-ONTOLOGY_DATE"/>
   <void:inDataset rdf:resource="#datasetdefinition"/>
+  <owl:versionInfo>1.3</owl:versionInfo>
  </cs:ChangeSet>  
 
  <cs:ChangeSet rdf:about="#f7afcbbdabbc5c2caabcbf6e173597af">
@@ -13469,9 +13515,27 @@
   <cs:createdDate>2024-02-20</cs:createdDate>
   <prov:endedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-02-20T14:59:32-04:00</prov:endedAtTime>
   <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-02-20T14:59:32-04:00</prov:startedAtTime>
-  <cs:changeReason>Ensure that breweries, distilleries, taprooms and offsales are proper locations. These are now subclasses of gs1:Organization, schema:Organization, org:Organization, foaf:Organization, prov:Agent, prov:Location and geosparql:Feature.</cs:changeReason>
+  <cs:changeReason xml:lang="en">Ensure that breweries, distilleries, taprooms and offsales are proper locations. These are now subclasses of gs1:Organization, schema:Organization, org:Organization, foaf:Organization, prov:Agent, prov:Location and geosparql:Feature.</cs:changeReason>
+  <cs:changeReason xml:lang="fr">Assurez que les brasseries, distilleries, taprooms et offsales sont des emplacements appropriés. Ce sont désormais des sous-classes de gs1:Organization, schema:Organization, org:Organization, foaf:Organization, prov:Agent, prov:Location and geosparql:Feature.</cs:changeReason>
   <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/beer-ONTOLOGY_DATE"/>
   <void:inDataset rdf:resource="#datasetdefinition"/>
+  <owl:versionInfo>1.3</owl:versionInfo>
+ </cs:ChangeSet>  
+
+ <cs:ChangeSet rdf:about="#d41d8cd98f00b204e9800998ecf8427e">
+  <cs:precedingChangeSet rdf:resource="#f7afcbbdabbc5c2caabcbf6e173597af"/>
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+  <prov:wasAttributedTo rdf:resource="#warren"/>
+  <cs:creatorName>Rob Warren</cs:creatorName>
+  <cs:createdDate>2024-02-21</cs:createdDate>
+  <prov:endedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-02-21T17:50:32-04:00</prov:endedAtTime>
+  <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-02-21T17:50:32-04:00</prov:startedAtTime>
+  <cs:changeReason xml:lang="en">Ensure changelog is in french and english; add prov/time compatibility statements.</cs:changeReason>
+  <cs:changeReason xml:lang="fr">S'assurer que le journal des modifications est en français et en anglais; ajouter des déclarations de compatibilité prov/time.</cs:changeReason>
+  <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/beer-ONTOLOGY_DATE"/>
+  <void:inDataset rdf:resource="#datasetdefinition"/>
+  <owl:versionInfo>1.3</owl:versionInfo>
  </cs:ChangeSet>  
   
   
